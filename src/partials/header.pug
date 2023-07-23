@@ -5,4 +5,9 @@ include /partials/mixins
     img(src="../assets/images/Logo.png", alt="Logo")
   .header-info 
     .header-nav 
+      ul.header-nav__ul 
+        li.header-nav__li home 
+        +links('speakers')
+        +links('schedule')
+        li.header-nav__li contact us
     +button('white', 'Get tickets') 
