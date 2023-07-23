@@ -1,5 +1,6 @@
 body {
-  width: 100%;
+  min-width: 1440px;
+  box-sizing: border-box;
   margin: 0 auto;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
@@ -16,38 +17,44 @@ body {
 @add7: #84C4FF;
 
 .header {
+width: 100%;
+height: 120px;
 display: inline-flex;
-padding: 32px 375px 32px 375px;
 justify-content: center;
 align-items: center;
 gap: 371px;
 }
 
-.musik {
-width: 1440px;
-height: 964px;
+.poster-block {
+z-index: -10;
+position: fixed;
+top: 0;
 }
 
-.button_blue {
+.musik {
+width: 100%
+}
+
+.button-blue {
   color: @blue;
 }
 
-.button_red {
+.button-red {
   color: @red;
 }
 
-.button_white {
+.button-white {
   color: @blue;
   background: @light;
   display: flex;
-  padding: 18px 34px;
+  padding: 15px 25px;
   align-items: center;
   gap: 12px;
 }
 
-.button_blue, .button_white, .button_red {
+.button-blue, .button-white, .button-red {
   border: 0;
   border-radius: 8px;
-  font-size: 200%;
+  font-size: 160%;
   cursor: pointer;
 }
