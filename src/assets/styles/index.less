@@ -22,7 +22,40 @@ height: 120px;
 display: inline-flex;
 justify-content: center;
 align-items: center;
-gap: 371px;
+gap: 361px;
+}
+
+.header-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.header-nav__ul {
+  display: inline-flex;
+  list-style-type: none;
+  gap: 40px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.header-nav__li, .header-nav__li-img {
+  color: @light;
+}
+
+.header-nav__li-img {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow-down {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
 }
 
 .poster-block {
@@ -55,6 +88,7 @@ width: 100%
 .button-blue, .button-white, .button-red {
   border: 0;
   border-radius: 8px;
-  font-size: 160%;
   cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
 }
