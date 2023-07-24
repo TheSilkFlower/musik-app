@@ -49,6 +49,7 @@ gap: 361px;
 
 .header-nav__li, .header-nav__li-img {
   color: @light;
+  cursor: pointer;
 }
 
 .header-nav__li-img {
@@ -63,18 +64,30 @@ gap: 361px;
   cursor: pointer;
 }
 
-.poster-block {
+.poster {
 background: url('../images/Img.png'); 
-background-size: contain;
+background-size: cover;
 width: 100%;
 min-height: 700px;
 z-index: -10;
 position: fixed;
 top: 0;
 display: flex;
+align-items: center;
+justify-content: center;
 }
 
-.poster-block-time {
+.poster-info {
+  width: 700px;
+  height: 400px;
+}
+
+.poster-info__offer-play
+  p {
+    color: @light;
+  }
+
+.poster-time {
 position: fixed;
 bottom: 50px;
 width: inherit;
@@ -95,8 +108,14 @@ line-height: normal;
 }
 
 .button-red {
-  color: @red;
+  color: @light;
+  background: @red;
+  display: flex;
+  padding: 15px 25px;
+  align-items: center;
+  gap: 12px;
 }
+
 
 .button-white {
   color: @blue;
