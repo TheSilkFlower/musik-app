@@ -1,2 +1,12 @@
-.poster-block 
-    .poster-block-time 22d 13h 46m 18s
+include /partials/mixins
+
+.poster 
+    .poster-info 
+        .poster-info__best 
+        .poster-info__description
+        .poster-info__offer 
+            +button('red', 'Get started') 
+            .poster-info__offer-play 
+                 img(src="../assets/images/Play.png", alt="Play")
+                 p Watch Video
+    .poster-time 22d 13h 46m 18s
