@@ -7,7 +7,8 @@ body {
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+  font-family: 'Raleway';
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@200;400&display=swap');
 }
 
 @red: #FC5252;
@@ -84,9 +85,28 @@ justify-content: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   font-family: 'Montserrat';
   color: @light;
+  margin-bottom: 50px;
+}
+
+.poster-info__best {
+  text-align: center;
+font-size: 60px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+}
+
+.poster-info__description {
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 22px;
+ font-style: normal;
+ font-weight: 200;
+ line-height: 32px;
 }
 
 .poster-info__offer {
@@ -98,17 +118,25 @@ justify-content: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+}
+
+.poster-info__offer, .poster-info__offer-play  {
+  cursor: pointer;
+}
+
+.poster-span {
+  color: @lightred;
 }
 
 .poster-time {
 position: fixed;
-bottom: 50px;
+bottom: 20px;
 width: inherit;
 height: 150px;
 color: transparent; /* прозрачный цвет букв */
 -webkit-text-stroke: 1px @light;
-opacity: 0.6;
+opacity: 0.7;
 text-align: center;
 font-family: Montserrat;
 font-size: 144px;
@@ -127,6 +155,8 @@ line-height: normal;
   display: flex;
   padding: 15px 25px;
   align-items: center;
+  width: 150px;
+  height: 50px;
   gap: 12px;
 }
 
