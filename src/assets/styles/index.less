@@ -80,12 +80,26 @@ justify-content: center;
 .poster-info {
   width: 700px;
   height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  font-family: 'Montserrat';
+  color: @light;
 }
 
-.poster-info__offer-play
-  p {
-    color: @light;
-  }
+.poster-info__offer {
+  display: flex;
+  gap: 40px;
+}
+
+.poster-info__offer-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 
 .poster-time {
 position: fixed;
