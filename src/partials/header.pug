@@ -1,13 +1,12 @@
 include /partials/mixins
 
 .header 
-  .header-logo 
+  .header__logo 
     img(src="../assets/images/Logo.png", alt="Logo")
-  .header-info 
-    .header-nav 
-      ul.header-nav__ul 
-        li.header-nav__li home 
-        +links('speakers')
-        +links('schedule')
-        li.header-nav__li contact us
-    +button('white', 'Get tickets') 
+  .header__info 
+    ul.header__nav 
+      li.header__item home 
+      +link('speakers')
+      +link('schedule')
+      li.header__item contact us
+  +button('white', 'Get tickets') 
