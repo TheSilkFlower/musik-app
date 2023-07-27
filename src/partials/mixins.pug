@@ -1,7 +1,10 @@
+- let i = true 
+
 mixin button(theme, value)
     button(class='button-' + theme)= value 
 
-mixin link(el)
+mixin link(el, i)
     li= el 
         a(href="#") 
+        if (i)
         img(src="../assets/images/arrow-down.png", class="arrow-down") 
