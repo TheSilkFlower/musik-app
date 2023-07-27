@@ -3,6 +3,8 @@ mixin button(theme, value)
 
 mixin link(el, i)
     li= el 
-        a(href="#")
         if (i !== 'undefined')
+        a(href="#")
         img(src="../assets/images/arrow-down.png", class="arrow-down") 
+        else 
+        a(href="#")
