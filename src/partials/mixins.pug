@@ -2,6 +2,6 @@ mixin button(theme, value)
     button(class='button-' + theme)= value 
 
 mixin link(el)
-    .header-nav__li-img
-        li(class="header-nav__li")= el 
+    li= el 
+        a(href="#") 
         img(src="../assets/images/arrow-down.png", class="arrow-down") 
