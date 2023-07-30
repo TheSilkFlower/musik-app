@@ -2,90 +2,11 @@
 @import 'fonts.less';
 @import 'button.less';
 @import 'header.less';
+@import 'poster.less';
 
 body {
   min-width: 1440px;
   box-sizing: border-box;
   margin: 0 auto;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-}
-
-.poster {
-background: url('../images/Img.png'); 
-background-size: cover;
-width: 100%;
-min-height: 700px;
-z-index: -10;
-position: fixed;
-top: 0;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.poster__info {
-  width: 700px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-  font-family: 'Montserrat';
-  color: @light;
-  margin-bottom: 50px;
-}
-
-.poster__best {
-  text-align: center;
-font-size: 60px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-transform: capitalize;
-}
-
-.poster__description {
-  text-align: center;
-  font-family: 'Raleway';
-  font-size: 22px;
- font-style: normal;
- font-weight: 200;
- line-height: 32px;
-}
-
-.poster__offer {
-  display: flex;
-  gap: 40px;
-}
-
-.poster__play {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.poster__offer, .poster__play  {
-  cursor: pointer;
-}
-
-.poster__span {
-  color: @lightred;
-}
-
-.poster__time {
-position: fixed;
-bottom: 20px;
-width: inherit;
-height: 150px;
-color: transparent; /* прозрачный цвет букв */
--webkit-text-stroke: 1px @light;
-opacity: 0.7;
-text-align: center;
-font-family: Montserrat;
-font-size: 144px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
 }
