@@ -1,11 +1,59 @@
 .genres {
-    height: 400px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .genres__text {
     color: @dark;
 }
 
-.genres__span {
+.genres__span-explore {
     color: @blue;
+}
+
+.genres-elements {
+    display: flex;
+    justify-content: space-between;
+}
+
+.genres__melody {
+    width: 270px;
+    height: 250px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.genres__wrapper {
+    gap: 15px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.genres__img {
+    width: 30px;
+    height: 30px;
+}
+
+.genres__name {
+    font-weight: 800;
+    font-size: 24px;
+    font-family: 'Montserrat';
+}
+
+.genres__name, .genres__view {
+    margin: 0px;
+}
+
+.genres__view {
+    padding-bottom: 25px;
+}
+
+.genres__light {
+    color: @light;
 }
