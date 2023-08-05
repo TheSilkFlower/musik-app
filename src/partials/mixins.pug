@@ -8,3 +8,11 @@ mixin link(el, i)
             img(src="../assets/images/arrow-down.png", class="arrow-down") 
         else 
             a(href="#")
+
+mixin melody(color, src, name, opacity)
+
+    .genres__melody(style=`background: rgba${color};`)
+        .genres__wrapper
+            img.genres__img(src=`../assets/images/${src}.png`, alt="Melody")
+            p.genres__name= name
+            p.genres__view Duis aute irure dolor in reprehenderit in voluptate velit esse 
