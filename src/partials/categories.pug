@@ -1,4 +1,10 @@
+include /partials/mixins
+
 .genres
-    .genres__text #[span.genres__span Explore] By Category
+    .genres__text #[span.genres__span-explore Explore] By Category
     .genres-elements 
-        
+        +melody('(252, 82, 82, 0.3)', 'mixer', 'Pop')
+        +melody('(255, 163, 163, 0.3)', 'pipes', 'Folk')
+        +melody('(56, 29, 219, 1)', 'saxophone', 'Instrumental')
+        +melody('(192, 0, 150, 0.3)', 'guitar', 'Rock')
+        +melody('(132, 196, 255, 0.3)', 'trumpet', 'Jazz')
