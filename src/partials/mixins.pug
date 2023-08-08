@@ -1,5 +1,7 @@
-mixin button(theme, value)
+mixin button(theme, value, src)
     button(class='button_' + theme)= value 
+        if (src)
+            img(src=`../assets/images/${src}.png`)
 
 mixin link(el, i)
     li= el 
