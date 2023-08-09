@@ -3,30 +3,34 @@ mixin button(theme, value, src)
         if (src)
             img(src=`../assets/images/${src}.png`)
 
+mixin logotype  
+    a(href="#")
+      img(src="../assets/images/Logo.png", alt="Logo")
+
 mixin infoblock(className, name, value)
     h2(class=className + '__caption')= name
     p(class=className + '__item')= value
 
 mixin link(el, i)
-    li= el 
+    li 
         if (i)
-            a(href="#")
+            a(href="#")= el 
             img(src="../assets/images/arrow-down.png", class="arrow-down") 
         else 
-            a(href="#")
+            a(href="#")= el
 
 mixin melody(color, src, name, textColor)
 
-    .genres__melody(style=`background: rgba${color};`)
-        .genres__wrapper
+    .genres-elements__melody(style=`background: rgba${color};`)
+        .genres-elements__wrapper
             if (textColor)
-                img.genres__img(src=`../assets/images/${src}.png`, alt="Melody")
-                p.genres__name.genres__name-color= name
-                p.genres-view.genres__view-color Duis aute irure dolor in reprehenderit in voluptate velit esse
+                img.genres-elements__img(src=`../assets/images/${src}.png`, alt="Melody")
+                p.genres-elements__name.genres-elements__name-color= name
+                p.genres-elements__view.genres-elements__view-color Duis aute irure dolor in reprehenderit in voluptate velit esse
             else
-                img.genres__img(src=`../assets/images/${src}.png`, alt="Melody")
-                p.genres__name= name
-                p.genres__view Duis aute irure dolor in reprehenderit in voluptate velit esse
+                img.genres-elements__img(src=`../assets/images/${src}.png`, alt="Melody")
+                p.genres-elements__name= name
+                p.genres-elements__view Duis aute irure dolor in reprehenderit in voluptate velit esse
 
 mixin confetti(src, cl)
     img(src=`../assets/images/${src}.png`, alt="Confetti", class=`genres_${cl}`)
