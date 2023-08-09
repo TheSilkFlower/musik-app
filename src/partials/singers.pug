@@ -1,4 +1,10 @@
+include ../partials/mixins
+
 .singers 
-    .singers__info 
-        +infoblock('singers', 'Singers', 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.')
-        +button('about', 'View all singers', 'arrow')
+    .singers__wrapper
+        .singers__info 
+            +infoblock('singers', 'Singers', 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.')
+            +button('about', 'View all singers', 'arrow')
+        +confetti('frame3', 'singers_frame-red')
+        +confetti('shape', 'singers_frame-shape')
+        +confetti('dots', 'singers_frame-dots')
