@@ -3,6 +3,10 @@ mixin button(theme, value, src)
         if (src)
             img(src=`../assets/images/${src}.png`)
 
+mixin infoblock(className, name, value)
+    h2(class=className + '__caption')= name
+    p(class=className + '__item')= value
+
 mixin link(el, i)
     li= el 
         if (i)
