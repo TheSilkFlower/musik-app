@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    gap: 30px;
 }
 
 .singers__info {
@@ -19,23 +20,90 @@
     margin: 20px 0px 50px;
 }
 
+.singers-peoples {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.singers-peoples__singer1, .singers-peoples__singer2,
+.singers-peoples__singer3, .singers-peoples__singer4 {
+    position: relative;
+}
+
+.singers-peoples__singer1-img1, .singers-peoples__singer1-img11,
+.singers-peoples__singer4-img4, .singers-peoples__singer4-img44 {
+    width: 270px;
+}
+
+.singers-peoples__singer2-img2, .singers-peoples__singer2-img22,
+.singers-peoples__singer3-img3, .singers-peoples__singer3-img33 {
+    width: 210px;
+}
+
+.singers-peoples__singer1-img11, .singers-peoples__singer2-img22, 
+.singers-peoples__singer3-img33, .singers-peoples__singer4-img44 {
+    position: absolute;
+    z-index: -10;
+}
+
+.singers-peoples__singer1-img1 {
+    position: relative;
+    padding-top: 50px;
+}
+
+.singers-peoples__singer1-img11 {
+    top: 80px;
+    left: 0px;
+}
+
+.singers-peoples__singer2-img2 {
+    position: relative;
+    left: 20px;
+}
+
+.singers-peoples__singer2-img22 {
+    top: 50px;
+    left: 20px;
+}
+
+.singers-peoples__singer3-img3 {
+    position: relative;
+    padding-top: 50px;
+}
+
+.singers-peoples__singer3-img33 {
+    bottom: -50px;
+    left: 0px;
+}
+
+.singers-peoples__singer4-img4 {
+    position: relative;
+    top: 25px;
+    left: 20px;
+}
+.singers-peoples__singer4-img44 {
+    bottom: 10px;
+    right: -20px;
+}
+
 .singers_frame-red {
     width: 100px;
     position: absolute;
-    left: 100px;
-    top: 450px;
+    left: 40px;
+    top: 580px;
 }
 
 .singers_frame-shape {
-    width: 140px;
+    width: 120px;
     position: absolute;
-    top: -30px;
+    top: 0px;
     right: 0px;
 }
 
 .singers_frame-dots {
-    width: 170px;
+    width: 140px;
     position: absolute;
-    top: -32px;
+    top: 0px;
     right: 0px;
 }
