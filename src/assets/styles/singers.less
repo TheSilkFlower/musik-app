@@ -1,7 +1,7 @@
 .singers__wrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     position: relative;
     gap: 30px;
 }
@@ -106,4 +106,35 @@
     position: absolute;
     top: 0px;
     right: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+    .singers__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .singers__info {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .singers__caption {
+        font-size: 42px;
+    }
+    .singers__item {
+        font-size: 30px;
+        text-align: center;
+    }
+    .singers-peoples {
+        width: 700px;
+    }
+    .singers-peoples__singer1-img1, .singers-peoples__singer1-img11,
+    .singers-peoples__singer4-img4, .singers-peoples__singer4-img44 {
+    width: 370px;
+    }
+    .singers-peoples__singer2-img2, .singers-peoples__singer2-img22,
+    .singers-peoples__singer3-img3, .singers-peoples__singer3-img33 {
+    width: 300px;
+    }
 }
