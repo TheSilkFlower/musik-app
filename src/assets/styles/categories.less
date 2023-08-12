@@ -1,5 +1,4 @@
 .genres {
-    height: 350px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -10,7 +9,6 @@
     position: relative;
     top: 0px;
     left: 310px;
-    width: 250px;
     font-size: 26px;
     margin: 0px;
     padding-bottom: 20px;
@@ -28,8 +26,7 @@
 }
 
 .genres_frame-red {
-    width: 80px;
-    height: 70px;
+    width: 100px;
     position: relative;
     top: -310px;
     left: 50px;
@@ -37,17 +34,16 @@
 
 .genres_frame-blue {
     width: 120px;
-    height: 100px;
     position: relative;
-    top: -160px;
-    left: 130px;
+    top: -190px;
+    left: 120px;
 }
 
 .genres_line {
     width: 30px;
     height: 20px;
     position: relative;
-    top: -455px;
+    top: -490px;
     left: 1280px;
 }
 
@@ -55,7 +51,7 @@
     width: 20px;
     height: 20px;
     position: relative;
-    top: -280px;
+    top: -310px;
     left: 1380px;
 }
 
@@ -98,4 +94,57 @@
 .genres-elements__view, .genres-elements__view-color {
     padding-bottom: 25px;
     font-family: 'Montserrat';
+}
+
+@media screen and (max-width: 1200px) {
+    .genres {
+        align-items: center;
+    }
+    .genres__text {
+        position: static;
+        font-size: 42px;
+        margin: 0px;
+        font-family: 'Montserrat';
+        font-weight: 700;
+        left: 0px;
+    }
+    .genres-elements {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .genres-elements__wrapper {
+        justify-content: space-evenly;
+    }
+    .genres-elements__melody {
+        width: 470px;
+        height: 450px;
+    }
+    .genres-elements__img {
+        width: 70px;
+        height: 70px;
+    }
+    .genres-elements__name, .genres-elements__name-color {
+        font-size: 38px;
+    }
+    .genres-elements__view, .genres-elements__view-color {
+        font-size: 30px;
+    }
+    .genres_frame-red {
+        top: -1110px;
+        left: -150px;
+    }
+    .genres_frame-blue {
+        top: -900px;
+        left: 130px;
+    }
+    .genres_line {
+        position: relative;
+        top: -600px;
+        left: 10px;
+    }
+    .genres_ball {
+        top: -330px;
+        left: 80px;
+    }
 }
