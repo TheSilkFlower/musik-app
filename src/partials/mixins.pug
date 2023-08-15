@@ -35,12 +35,12 @@ mixin melody(color, src, name, textColor)
 mixin confetti(src, cl)
     img(src=`../assets/images/${src}.png`, alt="Confetti", class=cl)
 
-mixin tariff(rate, cost, seat)
-    h3= rate  
-    p= '$' + cost 
+mixin tariff(rate, cost, seat, colorType)
+    h3.price-card__caption(class=`price-card__caption-${colorType}`)= rate  
+    p.price-card__cost(class=`price-card__cost-${colorType}`)= '$' + cost 
     p= seat + ' Available' 
-    p= 'Access to Wifi Router' 
-    p= 'Free Food & Coffee'
+    p= 'Access to Wi-Fi Router' 
+    p.price-card__info-eats= 'Free Food & Coffee'
 
 
                  
