@@ -1,4 +1,5 @@
-.genres {
+.genres__wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -22,7 +23,8 @@
 
 .genres-elements {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
 }
 
 .genres_frame-red {
@@ -100,9 +102,16 @@
     .genres {
         align-items: center;
     }
+    .genres__wrapper {    
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .genres__text {
         position: static;
-        font-size: 42px;
+        font-size: 28px;
         margin: 0px;
         font-family: 'Montserrat';
         font-weight: 700;
@@ -114,15 +123,16 @@
         gap: 20px;
     }
     .genres-elements__wrapper {
+        padding-top: 20px;
         justify-content: space-evenly;
     }
     .genres-elements__melody {
-        width: 800px;
-        height: 450px;
+        width: 350px;
+        height: auto;
     }
     .genres-elements__img {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     .genres-elements__name, .genres-elements__name-color {
         font-size: 38px;
@@ -135,8 +145,8 @@
         left: -400px;
     }
     .genres_frame-blue {
-        top: -1400px;
-        left: 400px;
+        top: -400px;
+        left: 150px;
     }
     .genres_line {
         position: relative;
