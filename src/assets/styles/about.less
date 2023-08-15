@@ -46,10 +46,10 @@
 }
 
 .about_zigzag {
-    width: 120px;
+    width: 100px;
     position: absolute;
     top: 330px;
-    left: 70px;
+    left: -20px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -63,23 +63,33 @@
         font-size: 42px;
     }
     .about__item {
-        font-size: 30px;
+        font-size: 23px;
         text-align: center;
     }
+    .about__pics {
+        width: 100%;
+    }
     .about__info {
-        width: 600px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .about__wrapper-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 30px;
         padding-bottom: 30px;
-        width: auto;
+        width: 100%;
         height: auto;
     }
     .about__pics-img1, .about__pics-img2 {
         position: static;
-        width: 460px;
+        width: 100%;
+    }
+    .about_zigzag {
+        top: -200px;
+        left: 50px;
     }
 }
