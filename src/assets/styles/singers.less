@@ -109,12 +109,16 @@
 }
 
 @media screen and (max-width: 1200px) {
+    .singers {
+        width: 100%;
+        padding: 0 20px;
+    }
     .singers__wrapper {
         display: flex;
         flex-direction: column-reverse;
     }
     .singers__info {
-        width: 600px;
+        width: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -123,18 +127,41 @@
         font-size: 42px;
     }
     .singers__item {
-        font-size: 30px;
+        font-size: 23px;
         text-align: center;
     }
     .singers-peoples {
-        width: 700px;
+        width: auto;display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .singers-peoples {
+        &__singer1-img1 {
+        padding-top: 0px;
+        position: static;
+    }
+        &__singer2-img2 {
+        left: 0px;
+        position: static;
+    }
+        &__singer3-img3 {
+        padding-top: 0px;
+        position: static;
+    }
+        &__singer4-img4 {
+        top: 0px;
+        left: 0px;
+        position: static;
+    }
     }
     .singers-peoples__singer1-img1, .singers-peoples__singer1-img11,
     .singers-peoples__singer4-img4, .singers-peoples__singer4-img44 {
-    width: 370px;
+    width: 100%;
     }
     .singers-peoples__singer2-img2, .singers-peoples__singer2-img22,
     .singers-peoples__singer3-img3, .singers-peoples__singer3-img33 {
-    width: 300px;
+    width: 100%;
     }
 }
