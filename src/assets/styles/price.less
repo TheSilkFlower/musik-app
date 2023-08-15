@@ -1,0 +1,100 @@
+.price__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.price__tariff {
+    display: flex;
+    gap: 30px;
+}
+
+.price-card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price__caption
+    h2 {
+        font-size: 30px;
+        font-family: 'Montserrat';
+        margin: 0 auto;
+    }
+
+.price-card 
+    p {
+        margin: 5px auto;
+    }
+    
+.price-card {
+    border-radius: 20px;
+    padding: 15px 0px;
+    box-shadow: 0px 0px 20px rgba(34, 34, 34, 0.15);
+} 
+
+.price-card__info-eats {
+    padding-bottom: 15px;
+}
+
+.price-card__caption {
+    font-size: 18px;
+    font-family: 'Montserrat';
+    margin: 0 auto;
+}
+
+.price-card__cost {
+    margin: 20px auto;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Montserrat';
+}
+
+.price-card__caption-color1, .price-card__cost-color1 {
+    color: @dark;
+}
+
+.price-card__caption-color2, .price-card__cost-color2 {
+    color: @blue;
+}
+
+.price-card__caption-color3, .price-card__cost-color3 {
+    color: @red;
+}
+
+.price_line, .price_ball, .price_tria {
+    position: absolute;
+}
+
+.price_ball {
+    width: 20px;
+    top: 3050px;
+    left: 350px;
+}
+
+.price_line {
+    width: 30px;
+    top: 2970px;
+    left: 250px;
+}
+
+.price_tria {
+    width: 35px;
+}
+
+@media screen and (max-width: 1200px) {
+    .price__wrapper {
+        width: 100%;
+        padding: 0 20px;
+        gap: 40px;
+    }
+    .price__tariff {
+        flex-direction: column;
+    }
+}
