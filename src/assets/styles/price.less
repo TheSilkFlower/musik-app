@@ -74,18 +74,20 @@
 
 .price_ball {
     width: 20px;
-    top: 3050px;
-    left: 350px;
+    top: 2750px;
+    left: 160px;
 }
 
 .price_line {
     width: 30px;
-    top: 2970px;
-    left: 250px;
+    top: 2650px;
+    left: 100px;
 }
 
 .price_tria {
     width: 35px;
+    top: 2500px;
+    left: 1200px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -101,4 +103,19 @@
         h2 {
             font-size: 26px;
         }
+    .price_line, .price_ball, .price_tria {
+        z-index: -10;
+    }
+    .price_line {
+        top: 6750px;
+        left: 40px;
+    }
+    .price_ball {
+        top: 6650px;
+        left: 20px;
+    }
+    .price_tria {
+        top: 7300px;
+        left: 400px;
+    }
 }
