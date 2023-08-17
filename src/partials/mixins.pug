@@ -42,5 +42,8 @@ mixin tariff(rate, cost, seat, colorType)
     p= 'Access to Wi-Fi Router' 
     p.price-card__info-eats= 'Free Food & Coffee'
 
+mixin brand(sponsorName)
+    img.sponsors-brands__logo(src=`..assets/images/${sponsorName}.png`, alt="Sponsor")
+
 
                  
