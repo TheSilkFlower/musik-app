@@ -26,12 +26,45 @@
     padding: 20px 25px;
 }
 
+.sponsors__shape, .sponsors__dots, .sponsors__tria {
+    position: absolute;
+}
+
+.sponsors__shape {
+    width: 120px;
+    top: 3200px;
+}
+
+.sponsors__dots {
+    width: 140px;
+    top: 3200px;
+    left: -5px;
+}
+.sponsors__tria {
+    width: 50px;
+    top: 3200px;
+    left: 1250px;
+}
+
 @media screen and (max-width: 1200px) {
+    .sponsors__wrapper {
+        width: 100%;
+        padding: 0 20px;
+    }
     .sponsors-brands {
         width: 450px;
         gap: 20px;
     }
     .sponsors-brands__logo {
         padding: 10px 0;
+    }
+    .sponsors__dots, .sponsors__shape {
+        top: 4000px;
+        z-index: -10;
+    }
+    .sponsors__tria {
+        top: 7550px;
+        left: 250px;
+        z-index: -10;
     }
 }
