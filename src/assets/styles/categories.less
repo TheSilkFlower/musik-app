@@ -3,13 +3,15 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
 }
 
 .genres__text {
     color: @dark;
     position: relative;
     top: 0px;
-    left: 310px;
+    left: 300px;
+    width: 250px;
     font-size: 26px;
     margin: 0px;
     padding-bottom: 20px;
@@ -27,34 +29,34 @@
     justify-content: center;
 }
 
+.genres_frame-red, .genres_frame-blue, 
+.genres_line, .genres_ball {
+    position: absolute;
+}
+
 .genres_frame-red {
     width: 100px;
-    position: relative;
-    top: -310px;
+    top: 870px;
     left: 50px;
 }
 
 .genres_frame-blue {
     width: 120px;
-    position: relative;
-    top: -190px;
-    left: 120px;
+    top: 1120px;
+    left: 130px;
 }
 
 .genres_line {
     width: 30px;
-    height: 20px;
-    position: relative;
-    top: -490px;
+    top: 930px;
     left: 1280px;
 }
 
 .genres_ball {
     width: 20px;
-    height: 20px;
-    position: relative;
-    top: -310px;
-    left: 1380px;
+    top: 1140px;
+    left: 1310px;
+    border-radius: 10px;
 }
 
 .genres-elements__melody {
@@ -111,7 +113,8 @@
     }
     .genres__text {
         position: static;
-        font-size: 28px;
+        width: 300px;
+        font-size: 30px;
         margin: 0px;
         font-family: 'Montserrat';
         font-weight: 700;
@@ -141,20 +144,19 @@
         font-size: 30px;
     }
     .genres_frame-red {
-        top: -1900px;
-        left: -400px;
+        top: 1000px;
+        left: 270px;
     }
     .genres_frame-blue {
-        top: -400px;
-        left: 150px;
+        top: 1750px;
+        left: 330px;
     }
     .genres_line {
-        position: relative;
-        top: -600px;
-        left: 10px;
+        top: 1350px;
+        left: 50px;
     }
     .genres_ball {
-        top: -330px;
-        left: 80px;
+        top: 2500px;
+        left: 330px;
     }
 }
