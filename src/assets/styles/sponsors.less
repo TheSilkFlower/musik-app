@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
+    align-items: center;
+    gap: 30px;
 }
 
 .sponsors__title 
@@ -10,4 +12,26 @@
     font-size: 30px;
     font-family: Montserrat;
     margin: 0 auto;
+}
+
+.sponsors-brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+}
+
+.sponsors-brands__logo {
+    padding: 20px 25px;
+}
+
+@media screen and (max-width: 1200px) {
+    .sponsors-brands {
+        width: 450px;
+        gap: 20px;
+    }
+    .sponsors-brands__logo {
+        padding: 10px 0;
+    }
 }
