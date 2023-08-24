@@ -1,0 +1,20 @@
+include /partials/mixins
+
+footer.footer 
+    .footer__wrapper 
+        .footer__block 
+            .footer__logo
+                +logotype
+            nav.footer-info
+                ul.footer-info__nav 
+                    +link('home')
+                    +link('company')
+                    +link('blog')
+                    +link('contact us')
+                    +link('sitemap')
+        .footer-info__socials
+            +media('book')
+            +media('twit')
+            +media('linked')
+            +media('insta')
+        
