@@ -45,5 +45,9 @@ mixin tariff(rate, cost, seat, colorType)
 mixin brand(sponsorName)
     img.sponsors-brands__logo(src=`../assets/images/${sponsorName}.png`, alt="Sponsor")
 
+mixin media(src)
+    a(href="#")
+      img.footer-info__socials-media(src=`../assets/images/${src}.png`, alt="Media")
+
 
                  
