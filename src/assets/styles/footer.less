@@ -1,6 +1,7 @@
 .footer {
     background-color: @black;
     &__wrapper {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -35,5 +36,40 @@
     &__socials {
         display: flex;
         gap: 30px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+            width: 100%;
+            padding: 0 20px;
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        &__logo {
+            a 
+                img {
+                    width: 120%;
+                }
+        }
+    }
+    
+    .footer-info {
+        &__nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 24px;
+        }
+        &__socials {
+            gap: 35px;
+            a
+                img {
+                    width: 40px;
+                }
+        }
     }
 }
