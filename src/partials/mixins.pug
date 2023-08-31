@@ -49,5 +49,21 @@ mixin media(src)
     a(href="#")
       img.footer-info__socials-media(src=`../assets/images/${src}.svg`, alt="Media")
 
+mixin instashot(src)
+    .gallery-cards__block
+        img.gallery-cards__card(src=`../assets/images/${src}.png`, alt="Card")
+        .gallery-cards__info   
+            .gallery-cards__mark
+                .gallery-cards__likes 
+                    img.gallery-cards__likes-i1(src="../assets/images/heart.svg", alt="Like")
+                    h5.gallery-cards__num #[b 140]
+                .gallery-cards__comments
+                    img.gallery-cards__likes-i2(src="../assets/images/chat.svg", alt="Chat")
+                    h5.gallery-cards__num #[b 412]
+        span.gallery-cards__part Lorem Ipsum Amet
+        span.gallery-cards__hash #music #concert #conference #london #event #artist #dj #soundtrack #dance
+
+
+
 
                  
