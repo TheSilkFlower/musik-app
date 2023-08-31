@@ -1,0 +1,66 @@
+.gallery {
+    &__wrapper {
+        position: relative;
+        background: linear-gradient(180deg, rgba(252, 82, 82, 0.05) 0%, rgba(252, 82, 82, 0.00) 100%);
+    }
+    &__title {
+        color: @dark;
+        font-family: Montserrat;
+        font-size: 26px;
+        font-style: normal;
+        margin: 0 auto;
+        padding: 130px 0px 40px 290px;
+    }
+}
+.gallery__logo {
+    width: 360px;
+    height: 360px;
+    z-index: -10;
+    position: absolute;
+    top: 10px;
+    left: 350px;
+    display: flex;
+    justify-content: center;
+}
+.gallery__logo-inst {
+    width: 300px;
+    opacity: 0.1;
+}
+
+.gallery-cards {
+    display: flex;
+    gap: 20px;
+        &__block {
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__card {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+        &__likes, &__comments {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        &__mark {
+            display: flex;
+            gap: 20px;
+        }
+        &__num {
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0 auto;
+        }
+        &__hash, &__part {
+            color: @dark;
+        }
+        &__part {
+            margin: 8px 0px;
+            font-size: 20px;
+        }
+        &__hash {
+            opacity: 0.6;
+        }
+}
