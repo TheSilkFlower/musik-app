@@ -1,1 +1,13 @@
 include /partials/mixins
+
+.gallery 
+    .gallery__wrapper 
+        h3.gallery__title See our Best Shots
+        .gallery__logo 
+            img.gallery__logo-inst(src="../assets/images/vector.svg", alt="Logo")
+        section.gallery-cards
+            +instashot('shot1')
+            +instashot('shot2')
+            +instashot('shot3')
+            +instashot('shot4')
+            +instashot('shot5')
