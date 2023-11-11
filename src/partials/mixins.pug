@@ -63,6 +63,17 @@ mixin instashot(src)
         span.gallery-cards__part Lorem Ipsum Amet
         span.gallery-cards__hash #music #concert #conference #london #event #artist #dj #soundtrack #dance
 
+mixin sign(src, text)
+    .contacts-signs
+        img.contacts-signs__img(src=`../assets/images/${src}.png`, alt="Logo")
+        p.contacts-signs__text= text
+
+mixin data(title, text, src)
+    .contacts-about
+        h4.contacts-about__title= title 
+        p.contacts-about__text= text  
+        img.contacts-about__img(src=`../assets/images/${src}.png`, alt="Line")
+
 
 
 
