@@ -74,7 +74,18 @@ mixin data(title, text, src)
         p.contacts-about__text= text  
         img.contacts-about__img(src=`../assets/images/${src}.png`, alt="Line")
 
-
-
-
-                 
+mixin mention(src, name, site)
+    .wrapper
+        .mentions__content 
+            .mentions__info 
+                .mentions__comment
+                    .mentions__quote
+                        img(src="../assets/images/uot.png", alt="Quotes")
+                    p.mentions__view Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    .mentions__quote2
+                        img(src="../assets/images/uot2.png", alt="Quotes")
+                .mentions__person
+                    img.mentions__user(src=`../assets/images/${src}.png`, alt="User")
+                    .mentions__id
+                        h4.mentions__name= name
+                        p.mentions__site= site
