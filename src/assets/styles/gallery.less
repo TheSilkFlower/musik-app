@@ -1,6 +1,7 @@
 .gallery {
     &__wrapper {
         position: relative;
+        padding-top: 190px;
         background: linear-gradient(180deg, rgba(252, 82, 82, 0.05) 0%, rgba(252, 82, 82, 0.00) 100%);
     }
     &__title {
@@ -8,8 +9,12 @@
         font-family: Montserrat;
         font-size: 26px;
         font-style: normal;
-        margin: 0 auto;
-        padding: 130px 0px 40px 290px;
+        margin: 0;
+        max-width: 600px;
+        position: relative;
+        top: -40px;
+        left: 290px;
+        // padding: 130px 0px 40px 290px;
     }
 }
 .gallery__logo {
@@ -18,7 +23,7 @@
     z-index: -10;
     position: absolute;
     top: 10px;
-    left: 350px;
+    left: 365px;
     display: flex;
     justify-content: center;
 }
