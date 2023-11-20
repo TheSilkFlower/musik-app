@@ -12,12 +12,12 @@ footer.footer
                 +sign('map', 'Plot 252, Block L Phase 2 Johar Town, Lahore, PK')
             img.contacts-figure(src="../assets/images/fig.png", alt="Figure")
         .contacts__form
-            .contacts__form-wrapper
+            form(action="", method="post").contacts__form-wrapper
                 h3.contacts__form-title Fill in your details
                 .contacts__about-wrapper
                     +data('Name', 'John Doe', 'line')
                     +data('Email', 'johndoe2347@mail.com', 'line')
-                    +data('Message', 'Duis nec sodales nibh. Proin lectus tortor, rutrum vel vulputate vitae, fringilla id magna. Vestibulum ornare eget urna nec pulvinar. Praesent porttitor convallis blandit. Fusce vel egestas dolor. Donec eu augue enim. Donec rutrum non lacus ac rhoncus. Morbi quis luctus leo, nec cursus ex', 'lineblue')
+                    +data('Message', 'Duis nec sodales nibh. Proin lectus tortor, rutrum vel vulputate vitae, fringilla id magna. Vestibulum ornare eget urna nec pulvinar. Praesent porttitor convallis blandit. Fusce vel egestas dolor. Donec eu augue enim. Donec rutrum non lacus ac rhoncus. Morbi quis luctus leo, nec cursus ex', 'lineblue', 'textarea')
                 +button('blue', 'Submit').contacts__form-button
             img.contacts-figure2(src="../assets/images/fig2.png", alt="Figure")
     .footer__wrapper 
