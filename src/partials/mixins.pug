@@ -68,11 +68,16 @@ mixin sign(src, text)
         img.contacts-signs__img(src=`../assets/images/${src}.png`, alt="Logo")
         p.contacts-signs__text= text
 
-mixin data(title, text, src)
+mixin data(title, text, src, type)
     .contacts-about
-        h4.contacts-about__title= title 
-        p.contacts-about__text= text  
-        img.contacts-about__img(src=`../assets/images/${src}.png`, alt="Line")
+        if (type)
+            h4.contacts-about__title= title
+            textarea.contacts-about__text(value=`${text}`, name="area", cols="30", rows="4", wrap="soft")
+            img.contacts-about__img(src=`../assets/images/${src}.png`, alt="Line")
+        else 
+            h4.contacts-about__title= title
+            input.contacts-about__text(value=`${text}`)
+            img.contacts-about__img(src=`../assets/images/${src}.png`, alt="Line")
 
 mixin mention(src, name, site)
     .wrapper
