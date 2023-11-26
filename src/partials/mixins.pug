@@ -94,3 +94,9 @@ mixin mention(src, name, site)
                     .mentions__id
                         h4.mentions__name= name
                         p.mentions__site= site
+
+mixin event(num, day, src)
+    .events__date
+        .events__numeration= num
+        .events__num-of-month= day 
+        .events__line
