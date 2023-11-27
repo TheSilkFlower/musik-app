@@ -95,8 +95,15 @@ mixin mention(src, name, site)
                         h4.mentions__name= name
                         p.mentions__site= site
 
-mixin event(num, day, src)
+mixin event(num, day)
     .events__date
         .events__numeration= num
         .events__num-of-month= day 
         .events__line
+
+mixin table(time, content, speakers, network)
+    .events-table__wrapper 
+        .events-table__header
+            .events-table
+
+    
