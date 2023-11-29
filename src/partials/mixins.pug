@@ -101,9 +101,21 @@ mixin event(num, day)
         .events__num-of-month= day 
         .events__line
 
-mixin table(time, content, speakers, network)
-    .events-table__wrapper 
-        .events-table__header
-            .events-table
+mixin speakers(src, name, value)
+    .events-table__speakers
+        img.events-table__person-img(src=`../assets/images/${src}.png`, alt="Speakers")
+        .events-table__person
+            .events-table__person-name= name 
+            .events-table__person-value= value  
+
+
+mixin network(src, network)
+    .events-table__network
+        p.events-table__network-status= network
+        img.events-table__network-img(src=`../assets/images/${src}.png`, alt="Network")
+
+mixin basic(time, content)
+    p.events-table__time= time 
+    p.events-table__content= content 
 
     
