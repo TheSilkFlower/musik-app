@@ -11,6 +11,7 @@
         flex-direction: column;
         align-items: flex-start;
         padding-top: 130px;
+        padding-bottom: 40px;
     }
     &__days {
         display: flex;
@@ -44,5 +45,61 @@
     }
     &_triangle, &_zigred, &_zigblue, &_balls {
         position: absolute;
+    }
+}
+
+.events-table {
+    width: 900px;
+    border-radius: 24px;
+    border: 1px solid rgba(224, 224, 224, 1);
+    &__header {
+        display: flex;
+        background: rgba(56, 29, 219, 0.05);
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+
+    }
+    &__title-time, &__time {
+        width: 25%;
+        padding-left: 25px;
+    }
+    &__title-content, &__content {
+        width: 35%;
+    }
+    &__title-speakers, &__speakers {
+        width: 20%;
+    }
+    &__title-network, &__network {
+        width: 20%;
+        padding-right: 25px;
+    }
+    &__title-time, &__title-content, &__title-speakers, &__title-network {
+        color: @dark;
+        font-size: 20px;
+        font-family: 'Raleway';
+        font-weight: 700;
+    }
+    &__timing {
+        display: flex;
+    }
+    &__list {
+        display: flex;
+    }
+    &__speakers {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__network {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    &__network-img {
+        height: 30px;
+    }
+    &__person-img {
+        height: 60px;
     }
 }
