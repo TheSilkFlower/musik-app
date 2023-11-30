@@ -101,9 +101,9 @@ mixin event(num, day)
         .events__num-of-month= day 
         .events__line
 
-mixin speakers(src, name, value)
-    .events-table__speakers
-        img.events-table__person-img(src=`../assets/images/${src}.png`, alt="Speakers")
+mixin speaker(src, name, value)
+    .events-table__speaker
+        img.events-table__person-img(src=`../assets/images/${src}.png`, alt="Speaker")
         .events-table__person
             .events-table__person-name= name 
             .events-table__person-value= value  
