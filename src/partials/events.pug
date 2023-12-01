@@ -16,8 +16,10 @@
                 .events-table__list
                     .events-table__timing
                         +basic('11:00 AM to 12:00 PM', 'Vestibulum vel eros vel metus lacinia feugiat a nec metus.')
-                        +speaker('person1', 'Yui Ronald', 'Booth: 2F12')
+                        .events-table__speakers
+                            +speaker('person1', 'Yui Ronald', 'Booth: 2F12')
                         +network('prev', 'Preview')
+                    .events-table__line
                     .events-table__timing
                         +basic('11:00 AM to 12:00 PM', 'Duis nec sodales nibh. Proin lectus tortor, rutrum vel vulputate vitae, fringilla id magna. Vestibulum ornare eget urna nec pulvinar. Praesent porttitor convallis blandit. Fusce vel egestas dolor. Donec eu augue enim. Donec rutrum non lacus ac rhoncus. Morbi quis luctus leo, nec cursus ex.')
                         .events-table__speakers
@@ -25,6 +27,13 @@
                             +speaker('person1', 'Yui Ronald', 'Booth: 2F12')
                             +speaker('person3', 'Emma Satoshi', 'Booth: 2A35')
                         +network('live', 'Live')
+                    .events-table__line
+                    .events-table__timing
+                        +basic('03:00 PM to 04:00 PM', 'Vestibulum vel eros vel metus lacinia feugiat a nec metus.')
+                        .events-table__speakers
+                            +speaker('person4', 'Sasha Jackson', 'Booth: 2F18')
+                            +speaker('person5', 'Diana Brock', 'Booth: 2F24')
+                        +network('upcom', 'Upcoming')
     +confetti('tria2', 'events_triangle')
     +confetti('zigred', 'events_zigred')
     +confetti('zigblue', 'events_zigblue')
