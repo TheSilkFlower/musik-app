@@ -7,21 +7,44 @@
         background: linear-gradient(180deg, rgba(56, 29, 219, 0.05) 0%, rgba(56, 29, 219, 0) 100%);
     }
     &__schedule {
+        width: 900px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding-top: 130px;
         padding-bottom: 40px;
     }
+    &__title {
+        margin: 0;
+        padding-bottom: 40px;
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 30px;
+    }
     &__days {
+        width: 100%;
         display: flex;
-        gap: 20px;
+        justify-content: space-between;
+    }
+    &__numeration, &__num-of-month {
+        font-family: 'Montserrat';
+        color: @blue;
+    }
+    &__numeration {
+        font-weight: 800;
+        font-size: 18px;
+    }
+    &__num-of-month {
+        font-weight: 700;
+        font-size: 12px;
+        opacity: 0.5;
     }
     &__line {
         width: 250px;
         height: 4px;
         background: @blue;
         opacity: 0.1;
+        margin-top: 10px;
     }
     &_triangle {
         top: 2550px;
@@ -116,6 +139,9 @@
         margin: 0;
         text-align: end;
     }
+    &__network-status-live {
+        color: @red;
+    } 
     &__time, &__content, &__speakers {
         margin: 0;
         padding-top: 30px;
