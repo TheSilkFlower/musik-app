@@ -106,7 +106,9 @@ mixin speaker(src, name, value)
         img.events-table__person-img(src=`../assets/images/${src}.png`, alt="Speaker")
         .events-table__person
             .events-table__person-name= name 
-            .events-table__person-value= value  
+            .events-table__person-stand
+                p.events-table__person-booth= 'Booth:'
+                p.events-table__person-value= value
 
 
 mixin network(src, network)
