@@ -34,9 +34,25 @@
     }
     
 .price-card {
+    overflow: hidden;
     border-radius: 20px;
-    padding: 15px 0px;
+    padding-bottom: 15px;
     box-shadow: 0px 0px 20px rgba(34, 34, 34, 0.15);
+    &__indicator-black, &__indicator-blue, &__indicator-red {
+        border-top-left-radius: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 3px;
+    }
+    &__indicator-black {
+        background-color: @dark;
+    }
+    &__indicator-blue {
+        background-color: @blue;
+    }
+    &__indicator-red {
+        background-color: @red;
+    }
 } 
 
 .price-card__info-eats {
