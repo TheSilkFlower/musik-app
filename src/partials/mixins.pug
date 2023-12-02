@@ -37,7 +37,7 @@ mixin confetti(src, cl)
 
 mixin tariff(rate, cost, seat, colorType)
     h3.price-card__caption(class=`price-card__caption-${colorType}`)= rate  
-    p.price-card__cost(class=`price-card__cost-${colorType}`)= '$' + cost 
+    h4.price-card__cost(class=`price-card__cost-${colorType}`)= '$' + cost 
     p(class=`price-card__seat-${colorType}`)= seat + ' Available' 
     p(class=`price-card__access-${colorType}`)= 'Access to Wi-Fi Router' 
     p.price-card__eats(class=`price-card__eats-${colorType}`)= 'Free Food & Coffee'
