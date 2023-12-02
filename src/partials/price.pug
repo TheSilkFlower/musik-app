@@ -3,13 +3,16 @@
         .price__caption 
             h2 Choose a Tier that's right for you
         .price__tariff 
-            .price-card 
+            .price-card
+                .price-card__indicator-black 
                 +tariff('Basic', 100, '1 Seat', 'color1')
                 +button('white', 'Get tickets') 
             .price-card 
+                .price-card__indicator-blue
                 +tariff('Standard', 150, '1 Seat', 'color2')
                 +button('blue', 'Get tickets')
             .price-card 
+                .price-card__indicator-red
                 +tariff('Premium', 200, '2 Seats', 'color3')
                 +button('white', 'Get tickets')
     +confetti('conf4', 'price_ball')
