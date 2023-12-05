@@ -72,7 +72,7 @@ mixin data(title, text, src, type)
     .contacts-about
         if (type)
             h4.contacts-about__title= title
-            textarea.contacts-about__text(value=`${text}`, name="area", cols="30", rows="4", wrap="soft")
+            textarea.contacts-about__text(name="area", cols="30", rows="4")= text 
             img.contacts-about__img(src=`../assets/images/${src}.png`, alt="Line")
         else 
             h4.contacts-about__title= title
