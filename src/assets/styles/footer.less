@@ -14,6 +14,16 @@
         align-items: flex-start;
         justify-content: flex-end;
     }
+    &__logo {
+        a 
+          img {
+              transition: 0.7s;
+            }
+          img:hover {
+              transition: 0.7s;
+              transform: scale(1.1); 
+            }
+      }
 }
 
 .footer-info {
@@ -53,6 +63,13 @@
     &__socials {
         display: flex;
         gap: 30px;
+        a  
+            img, img:hover {
+                transition: 0.3s;
+            }
+            img:hover {
+                transform: scale(1.2);
+            }
     }
     &__media {
         display: flex;
