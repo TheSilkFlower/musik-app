@@ -111,17 +111,25 @@
     top: -10px;
 }
 
+.contacts-about:last-child {
+    color: @blue;
+}
+
 @media screen and (max-width: 1200px) {
     .contacts {
         &__wrapper {
+            width: 100%;
+            display: block;
             flex-direction: column;
             align-items: center;
         }
         &__details {
-            padding: 20px 0px 170px;
+            width: 100%;
+            padding: 0 20px 150px;
         }
         &__form {
-            padding: 50px 0px;
+            width: 100%;
+            padding: 50px 20px;
         }
         &__details, &__form {
             width: 100%;
@@ -132,15 +140,24 @@
         &__form-wrapper {
             padding: 0 20px;
             align-items: flex-start;
-            width: 300px;
+            width: 370px;
         }
         &__info, &__block {
             padding-left: 20px;
+        }
+        &__info {
+            padding-top: 40px;
         }
         &__form-button {
             width: 250px;
             font-size: 24px;
             height: 70px;
         }
+        }
+        .contacts-figure {
+            width: 120px;
+        }
+        .contacts-figure2 {
+            display: block;
         }
     }
