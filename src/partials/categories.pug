@@ -3,12 +3,16 @@ include /partials/mixins
 .genres
     .genres__wrapper 
         h3.genres__text #[span.genres__span-explore Explore] By Category
-        .genres-elements 
-            +melody('(252, 82, 82, 0.3)', 'mixer', 'Pop')
-            +melody('(255, 163, 163, 0.3)', 'pipes', 'Folk')
-            +melody('(56, 29, 219, 1)', 'saxophone', 'Instrumental', true)
-            +melody('(192, 0, 150, 0.3)', 'guitar', 'Rock')
-            +melody('(132, 196, 255, 0.3)', 'trumpet', 'Jazz')
+        .swiper
+            .genres-elements.swiper-wrapper
+                +melody('(252, 82, 82, 0.3)', 'mixer', 'Pop')
+                +melody('(255, 163, 163, 0.3)', 'pipes', 'Folk')
+                +melody('(56, 29, 219, 1)', 'saxophone', 'Instrumental', true)
+                +melody('(192, 0, 150, 0.3)', 'guitar', 'Rock')
+                +melody('(132, 196, 255, 0.3)', 'trumpet', 'Jazz')
+            .swiper-button-prev 
+            .swiper-button-next
+            //- .swiper-pagination
     +confetti('frame2', 'genres_frame-red')
     +confetti('frame1', 'genres_frame-blue')
     +confetti('conf5', 'genres_line')
