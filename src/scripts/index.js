@@ -3,7 +3,6 @@
 import '../lib/style'
 console.log('Hello World')
 // eslint-disable-next-line no-unused-vars
-
 const swiper = window.Swiper('.swiper', {
   init: true,
   slidesPerView: 3,
@@ -19,5 +18,3 @@ const swiper = window.Swiper('.swiper', {
     el: '.swiper-pagination'
   }
 })
-
-console.log(swiper)
