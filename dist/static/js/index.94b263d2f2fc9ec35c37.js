@@ -1,0 +1,1 @@
+webpackJsonp([1],{2:function(e,i,n){"use strict";Object.defineProperty(i,"__esModule",{value:!0});n(0);console.log("Hello World");window.Swiper(".swiper",{init:!0,slidesPerView:3,spaceBetween:30,loop:!0,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination"}})}},[2]);
