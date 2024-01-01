@@ -2,19 +2,25 @@
 
 import '../lib/style'
 console.log('Hello World')
-// eslint-disable-next-line no-unused-vars
-const swiper = window.Swiper('.swiper', {
-  init: true,
-  slidesPerView: 3,
-  spaceBetween: 30,
-  loop: true,
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
+document.addEventListener('DOMContentLoaded', () => {
+  const width = window.innerWidth
+  if (width < 1200) {
+    // eslint-disable-next-line no-unused-vars
+    const swiper = window.Swiper('.swiper', {
+      init: true,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
 
-  pagination: {
-    el: '.swiper-pagination'
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+
+      pagination: {
+        el: '.swiper-pagination'
+      }
+    })
   }
 })
