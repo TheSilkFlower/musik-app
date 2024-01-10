@@ -27,3 +27,9 @@ function makeActive () {
 document.querySelectorAll('.events__date').forEach((elem) => {
   elem.addEventListener('click', makeActive)
 })
+
+setInterval(() => {
+  const sign = document.querySelector('.contacts-signs__img')
+  sign.classList.remove('.contacts-signs__img-animate')
+  sign.classList.add('.contacts-signs__img-animate')
+}, 5000)
