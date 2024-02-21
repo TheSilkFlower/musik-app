@@ -28,6 +28,17 @@ document.querySelectorAll('.events__date').forEach((elem) => {
   elem.addEventListener('click', makeActive)
 })
 
+const swiper = new window.Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: false,
+  navigation: {
+    prevEl: '.swiper-prev-button',
+    nextEl: '.swiper-next-button'
+  }
+})
+
+console.log(swiper)
+
 // setInterval(() => {
 //   const sign = document.querySelector('.contacts-signs__img')
 //   sign.classList.remove('.contacts-signs__img-animate')
