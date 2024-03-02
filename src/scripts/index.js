@@ -28,12 +28,17 @@ document.querySelectorAll('.events__date').forEach((elem) => {
   elem.addEventListener('click', makeActive)
 })
 
-const swiper = new window.Swiper('.swiper', {
+const swiper = new window.Swiper('.genres-swiper', {
   direction: 'horizontal',
+  slidesPerView: 1,
+  initialSlide: 2,
+  centeredSlides: true,
+  spaceBetween: 30,
   loop: false,
+  effect: 'fade',
   navigation: {
-    prevEl: '.swiper-prev-button',
-    nextEl: '.swiper-next-button'
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next'
   }
 })
 
