@@ -19,17 +19,30 @@ mixin link(el, i)
         else 
             a(href="#")= el
 
-mixin melody(color, src, name, textColor)
-    .genres-elements__melody(style=`background: rgba${color};`)
-        .genres-elements__wrapper
-            if (textColor)
-                img.genres-elements__img(src=`../assets/images/${src}.png`, alt="Melody")
-                p.genres-elements__name.genres-elements__name-color= name
-                p.genres-elements__view.genres-elements__view-color Duis aute irure dolor in reprehenderit in voluptate velit esse
-            else
-                img.genres-elements__img(src=`../assets/images/${src}.png`, alt="Melody")
-                p.genres-elements__name= name
-                p.genres-elements__view Duis aute irure dolor in reprehenderit in voluptate velit esse
+mixin melody(color, src, name, textColor, swiper)
+    if (swiper)
+        .swiper-slide
+            .genres-elements__melody(style=`background: rgba${color};`)
+                .genres-elements__wrapper
+                    if (textColor)
+                        img.genres-elements__img(src=`../assets/images/${src}.png`, alt="Melody")
+                        p.genres-elements__name.genres-elements__name-color= name
+                        p.genres-elements__view.genres-elements__view-color Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    else
+                        img.genres-elements__img(src=`../assets/images/${src}.png`, alt="Melody")
+                        p.genres-elements__name= name
+                        p.genres-elements__view Duis aute irure dolor in reprehenderit in voluptate velit esse
+    else 
+        .genres-elements__melody(style=`background: rgba${color};`)
+            .genres-elements__wrapper
+                if (textColor)
+                    img.genres-elements__img(src=`../assets/images/${src}.png`, alt="Melody")
+                    p.genres-elements__name.genres-elements__name-color= name
+                    p.genres-elements__view.genres-elements__view-color Duis aute irure dolor in reprehenderit in voluptate velit esse
+                else
+                    img.genres-elements__img(src=`../assets/images/${src}.png`, alt="Melody")
+                    p.genres-elements__name= name
+                    p.genres-elements__view Duis aute irure dolor in reprehenderit in voluptate velit esse
 
 mixin confetti(src, cl)
     img(src=`../assets/images/${src}.png`, alt="Confetti", class=cl)
@@ -79,20 +92,20 @@ mixin data(title, src, type)
             img.contacts-about__img(src=`../assets/images/${src}.png`, alt="Line")
 
 mixin mention(src, name, site)
-    .wrapper
-        .mentions__content 
-            .mentions__info 
-                .mentions__comment
-                    .mentions__quote
-                        img(src="../assets/images/uot.png", alt="Quotes")
-                    p.mentions__view Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    .mentions__quote2
-                        img(src="../assets/images/uot2.png", alt="Quotes")
-                .mentions__person
-                    img.mentions__user(src=`../assets/images/${src}.png`, alt="User")
-                    .mentions__id
-                        h4.mentions__name= name
-                        p.mentions__site= site
+        .wrapper
+            .mentions__content 
+                .mentions__info 
+                    .mentions__comment
+                        .mentions__quote
+                            img(src="../assets/images/uot.png", alt="Quotes")
+                        p.mentions__view Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        .mentions__quote2
+                            img(src="../assets/images/uot2.png", alt="Quotes")
+                    .mentions__person
+                        img.mentions__user(src=`../assets/images/${src}.png`, alt="User")
+                        .mentions__id
+                            h4.mentions__name= name
+                            p.mentions__site= site
 
 mixin event(num, day)
     .events__date
