@@ -1,0 +1,29 @@
+.genres-swiper {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .genres-swiper {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        border: 2px solid @blue;
+    .genres-button-next, .genres-button-prev {
+        color: @blue;
+    }
+    .swiper-wrapper {
+        display: flex;
+        box-sizing: content-box;
+    }
+    .swiper-slide {
+        display: flex;
+        width: 100%;
+        // max-width: 350px;
+        justify-content: center;
+        opacity: .5;
+        &-active {
+            opacity: 1;
+        }
+    }
+    }
+}
