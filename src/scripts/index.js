@@ -28,6 +28,7 @@ document.querySelectorAll('.events__date').forEach((elem) => {
   elem.addEventListener('click', makeActive)
 })
 
+// eslint-disable-next-line no-unused-vars
 const swiper = new window.Swiper('.genres-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
@@ -42,7 +43,17 @@ const swiper = new window.Swiper('.genres-swiper', {
   }
 })
 
-console.log(swiper)
+// eslint-disable-next-line no-unused-vars
+const singer = new window.Swiper('.singer-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  spaceBetween: 20,
+  effect: 'fade',
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next'
+  }
+})
 
 // setInterval(() => {
 //   const sign = document.querySelector('.contacts-signs__img')
