@@ -7,6 +7,16 @@ include ../partials/mixins
             +mention('ava', 'Ellie James', 'lorem.com')
             +mention('ava2', 'Jhonny Doe', 'ipsum.com')
             +mention('ava3', 'Myne Barack', 'ipsum.com')
+        .swiper.mention-swiper 
+            .swiper-wrapper.mention-wrapper
+                .swiper-slide.mention-slide
+                    +mention('ava', 'Ellie James', 'lorem.com')
+                .swiper-slide.mention-slide
+                    +mention('ava2', 'Jhonny Doe', 'ipsum.com')
+                .swiper-slide.mention-slide
+                    +mention('ava3', 'Myne Barack', 'ipsum.com')
+            .swiper-button-prev.mention-prev 
+            .swiper-button-next.mention-next
             //- .swiper-button-prev 
             //- .swiper-button-next
 
