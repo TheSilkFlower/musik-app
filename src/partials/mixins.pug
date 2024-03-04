@@ -21,7 +21,7 @@ mixin link(el, i)
 
 mixin melody(color, src, name, textColor, swiper)
     if (swiper)
-        .swiper-slide
+        .swiper-slide.genres-slide
             .genres-elements__melody(style=`background: rgba${color};`)
                 .genres-elements__wrapper
                     if (textColor)
