@@ -72,6 +72,7 @@
     .mentions {
         width: 100%;
         &__block {
+            display: none;
             flex-direction: column;
             align-items: center;
         }
@@ -79,11 +80,21 @@
             width: 100%;
             padding: 0 20px;
         }
-        .wrapper:nth-child(2n+1) {
-            display: none;
-        }
+        // .wrapper:nth-child(2n+1) {
+        //     display: none;
+        // }
         &__content {
             width: auto;
         }
+        &__info {
+            flex-direction: column-reverse;
+        }
+        &__person {
+            flex-direction: column;
+            padding-top: 10px;
+        }
+    }
+    .wrapper:nth-child(2n+1) {
+        opacity: 1;
     }
 }
