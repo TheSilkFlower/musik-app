@@ -29,14 +29,9 @@ document.querySelectorAll('.events__date').forEach((elem) => {
 })
 
 // eslint-disable-next-line no-unused-vars
-const swiper = new window.Swiper('.genres-swiper', {
+const genres = new window.Swiper('.genres-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
-  initialSlide: 2,
-  centeredSlides: true,
-  spaceBetween: 30,
-  loop: false,
-  effect: 'fade',
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next'
@@ -44,16 +39,65 @@ const swiper = new window.Swiper('.genres-swiper', {
 })
 
 // eslint-disable-next-line no-unused-vars
+const aboutSwiper = new window.Swiper('.about-swiper', {
+  direction: 'horizontal',
+  slidesPerView: 1,
+  loop: false,
+  effect: 'cards',
+  autoplay: {
+    delay: 4000
+  }
+})
+
+// eslint-disable-next-line no-unused-vars
 const singer = new window.Swiper('.singer-swiper', {
   direction: 'horizontal',
-  loop: false,
-  spaceBetween: 20,
-  effect: 'fade',
+  loop: true,
+  spaceBetween: 5,
+  autoplay: {
+    delay: 5000
+  },
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next'
   }
 })
+
+// eslint-disable-next-line no-unused-vars
+const mention = new window.Swiper('.mention-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  spaceBetween: 20,
+  slidesPerView: 1.8,
+  centeredSlides: true,
+  initialSlide: 1,
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next'
+  }
+})
+
+// eslint-disable-next-line no-unused-vars
+const gallery = new window.Swiper('.gallery-swiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 1.5,
+  spaceBetween: 20,
+  initialSlide: 1,
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true
+  },
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next'
+  }
+}
+)
 
 // setInterval(() => {
 //   const sign = document.querySelector('.contacts-signs__img')
