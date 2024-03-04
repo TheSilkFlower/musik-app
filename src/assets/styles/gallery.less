@@ -93,10 +93,16 @@
             width: 200px;
         }
     } 
-    .gallery-cards__block:not(:first-child) {
+    // .gallery-cards__block:not(:first-child) {
+    //     display: none;
+    // }
+    // .gallery-cards__block:first-child {
+    //     opacity: 1;
+    // }
+    .gallery-cards {
         display: none;
-    }
-    .gallery-cards__block:first-child {
-        opacity: 1;
+        &__block:first-child, &__block:last-child {
+            opacity: 1;
+        }
     }
 }
