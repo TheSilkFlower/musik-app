@@ -3,7 +3,8 @@
 import '../lib/style'
 console.log('Hello World')
 
-function makeActive () {
+// функция для определения активного дня
+function makeActiveDay () {
   let allNumerations = document.querySelectorAll('.events__numeration')
   for (let num of allNumerations) {
     num.style.opacity = '0.5'
@@ -25,7 +26,7 @@ function makeActive () {
 }
 
 document.querySelectorAll('.events__date').forEach((elem) => {
-  elem.addEventListener('click', makeActive)
+  elem.addEventListener('click', makeActiveDay)
 })
 
 // eslint-disable-next-line no-unused-vars
@@ -98,9 +99,3 @@ const gallery = new window.Swiper('.gallery-swiper', {
   }
 }
 )
-
-// setInterval(() => {
-//   const sign = document.querySelector('.contacts-signs__img')
-//   sign.classList.remove('.contacts-signs__img-animate')
-//   sign.classList.add('.contacts-signs__img-animate')
-// }, 7000)
