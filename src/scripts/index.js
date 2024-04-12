@@ -8,6 +8,7 @@ let allNumsOfMonth = document.querySelectorAll('.events__num-of-month')
 let allLines = document.querySelectorAll('.events__line')
 let allContents = document.querySelectorAll('.events-table__content')
 let allUsers = document.querySelectorAll('.events-table__person-name')
+let table = document.querySelectorAll('.events-table__list')
 let timer
 
 // функция для определения активного дня
@@ -29,10 +30,14 @@ function makeActiveDay () {
   numOfMonth.style.opacity = '1'
   line.style.opacity = '1'
 
-  timer = setTimeout(() => {
-    console.log('Hello from timeout!')
-    getDataFromFetch()
-  }, 2000)
+  for (let elem of table) {
+    elem.style.display = 'none'
+    timer = setTimeout(() => {
+      console.log('Hello from timeout!')
+      elem.style.display = 'block'
+      getDataFromFetch()
+    }, 2000)
+  }
 }
 
 function getDataFromFetch () {
