@@ -3,26 +3,44 @@
 import '../lib/style'
 console.log('Hello World')
 
+let allNumerations = document.querySelectorAll('.events__numeration')
+let allNumsOfMonth = document.querySelectorAll('.events__num-of-month')
+let allLines = document.querySelectorAll('.events__line')
+let allContents = document.querySelectorAll('.events-table__content')
+let allUsers = document.querySelectorAll('.events-table__person-name')
+
 // функция для определения активного дня
 function makeActiveDay () {
-  let allNumerations = document.querySelectorAll('.events__numeration')
   for (let num of allNumerations) {
     num.style.opacity = '0.5'
   }
-  let allNumsOfMonth = document.querySelectorAll('.events__num-of-month')
   for (let num of allNumsOfMonth) {
     num.style.opacity = '0.3'
   }
-  let allLines = document.querySelectorAll('.events__line')
   for (let num of allLines) {
     num.style.opacity = '0.1'
   }
+
   let numeration = this.querySelector('.events__numeration')
   let numOfMonth = this.querySelector('.events__num-of-month')
   let line = this.querySelector('.events__line')
   numeration.style.opacity = '1'
   numOfMonth.style.opacity = '1'
   line.style.opacity = '1'
+
+  for (let elem of allContents) {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(res => res.json())
+    .then(data => data.splice(0, 15))
+    .then(data => { elem.innerHTML = data[Math.floor(Math.random() * 15)].title })
+  }
+
+  for (let user of allUsers) {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(data => data.splice(0, 10))
+    .then(data => { user.innerHTML = data[Math.floor(Math.random() * 10)].name })
+  }
 }
 
 document.querySelectorAll('.events__date').forEach((elem) => {
