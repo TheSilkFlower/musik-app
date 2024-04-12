@@ -28,6 +28,10 @@ function makeActiveDay () {
   numOfMonth.style.opacity = '1'
   line.style.opacity = '1'
 
+  getDataFromFetch()
+}
+
+function getDataFromFetch () {
   for (let elem of allContents) {
     fetch('https://jsonplaceholder.typicode.com/todos')
     .then(res => res.json())
