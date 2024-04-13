@@ -6,8 +6,8 @@ console.log('Hello World')
 let allNumerations = document.querySelectorAll('.events__numeration')
 let allNumsOfMonth = document.querySelectorAll('.events__num-of-month')
 let allLines = document.querySelectorAll('.events__line')
-let allContents = document.querySelectorAll('.events-table__content')
-let allUsers = document.querySelectorAll('.events-table__person-name')
+// let allContents = document.querySelectorAll('.events-table__content')
+// let allUsers = document.querySelectorAll('.events-table__person-name')
 let table = document.querySelectorAll('.events-table__timing')
 let loader = document.querySelector('.events-loader')
 let el
@@ -35,32 +35,6 @@ function makeActiveDay () {
     el.style.opacity = 0
   }
   loader.style.display = 'block'
-  setTimeout(() => {
-    getDataFromFetch()
-  }, 2000)
-}
-
-function getDataFromFetch () {
-  for (el of table) {
-    el.style.opacity = 1
-  }
-  for (let elem of allContents) {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-    .then(res => res.json())
-    .then(data => data.splice(0, 15))
-    .then(data => {
-      elem.innerHTML = data[Math.floor(Math.random() * 15)].title
-    })
-  }
-  for (let user of allUsers) {
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
-    .then(data => data.splice(0, 10))
-    .then(data => {
-      user.innerHTML = data[Math.floor(Math.random() * 10)].name
-    })
-    loader.style.display = 'none'
-  }
 }
 
 document.querySelectorAll('.events__date').forEach((elem) => {
