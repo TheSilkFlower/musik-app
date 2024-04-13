@@ -8,8 +8,9 @@ let allNumsOfMonth = document.querySelectorAll('.events__num-of-month')
 let allLines = document.querySelectorAll('.events__line')
 let allContents = document.querySelectorAll('.events-table__content')
 let allUsers = document.querySelectorAll('.events-table__person-name')
-let table = document.querySelectorAll('.events-table__list')
-let timer
+let table = document.querySelectorAll('.events-table__timing')
+let loader = document.querySelector('.events-loader')
+let el
 
 // функция для определения активного дня
 function makeActiveDay () {
@@ -30,17 +31,19 @@ function makeActiveDay () {
   numOfMonth.style.opacity = '1'
   line.style.opacity = '1'
 
-  for (let elem of table) {
-    elem.style.display = 'none'
-    timer = setTimeout(() => {
-      console.log('Hello from timeout!')
-      elem.style.display = 'block'
-      getDataFromFetch()
-    }, 2000)
+  for (el of table) {
+    el.style.opacity = 0
   }
+  loader.style.display = 'block'
+  setTimeout(() => {
+    getDataFromFetch()
+  }, 2000)
 }
 
 function getDataFromFetch () {
+  for (el of table) {
+    el.style.opacity = 1
+  }
   for (let elem of allContents) {
     fetch('https://jsonplaceholder.typicode.com/todos')
     .then(res => res.json())
@@ -56,8 +59,8 @@ function getDataFromFetch () {
     .then(data => {
       user.innerHTML = data[Math.floor(Math.random() * 10)].name
     })
+    loader.style.display = 'none'
   }
-  clearTimeout(timer)
 }
 
 document.querySelectorAll('.events__date').forEach((elem) => {
