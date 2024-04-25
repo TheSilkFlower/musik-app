@@ -107,14 +107,13 @@ mixin mention(src, name, site)
                             h4.mentions__name= name
                             p.mentions__site= site
 
-mixin event(num, day)
+mixin event(num)
     .events__date
         .events__numeration= num
-        .events__num-of-month= day 
         .events__line
 
 mixin speaker(src, name, value)
-    .events-table__speaker
+    .events-table__artist
         img.events-table__person-img(src=`../assets/images/${src}.png`, alt="Speaker")
         .events-table__person
             .events-table__person-name= name 
@@ -128,7 +127,7 @@ mixin network(src, network)
         p.events-table__network-status(class=`events-table__network-status-${src}`)= network
         img.events-table__network-img(src=`../assets/images/${src}.png`, alt="Network")
 
-mixin basic(time, content)
+mixin basic(time, description)
     p.events-table__time= time 
-    p.events-table__content= content 
+    p.events-table__description= description 
     
