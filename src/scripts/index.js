@@ -5,7 +5,8 @@ console.log('Hello World')
 
 let allNumerations = document.querySelectorAll('.events__numeration')
 let allLines = document.querySelectorAll('.events__line')
-let table = document.querySelectorAll('.events-table__timing')
+let tableBlock = document.querySelectorAll('.events-table__timing')
+// let table = document.querySelector('.events-table__list')
 let loader = document.querySelector('.events-loader')
 let el
 
@@ -23,11 +24,30 @@ function makeActiveDay () {
   numeration.style.opacity = '1'
   line.style.opacity = '1'
 
-  for (el of table) {
+  // скрываем данные таблицы
+  for (el of tableBlock) {
     el.style.opacity = 0
   }
+  // отображаем лоадер
   loader.style.display = 'block'
 }
+
+// получаем данные из fetch-запроса
+async function getDataFromFetch () {
+  let data = await fetch('https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=324&apikey=DrArtOzm58BOTnvtou46RbvwbG7uRTCb')
+  let res = await data.json()
+  let result = await res['_embedded'].events
+  console.log(result)
+  let infoEvent = []
+  result.slice(0, 5).forEach(elem => {
+    infoEvent.push([elem.name, elem._embedded.venues[0].name, elem.dates.start.localDate, elem.dates.start.localTime, elem.images[0].url, elem.url])
+    infoEvent.slice(0, 5)
+  })
+  console.log(infoEvent)
+  return infoEvent
+}
+
+getDataFromFetch()
 
 document.querySelectorAll('.events__date').forEach((elem) => {
   elem.addEventListener('click', makeActiveDay)
