@@ -105,10 +105,10 @@
         width: 25%;
         padding-left: 25px;
     }
-    &__title-content, &__content {
+    &__title-description, &__description {
         width: 35%;
     }
-    &__title-speakers, &__speakers {
+    &__title-artists, &__artists {
         width: 25%;
         width: 230px;
     }
@@ -116,7 +116,7 @@
         width: 15%;
         padding-right: 25px;
     }
-    &__title-time, &__title-content, &__title-speakers, &__title-network {
+    &__title-time, &__title-description, &__title-artists, &__title-network {
         color: @dark;
         font-size: 20px;
         font-family: 'Raleway';
@@ -135,18 +135,18 @@
         height: 1px;
         background-color: rgba(224, 224, 224, 1);
     }
-    &__content {
+    &__description {
         max-width: 270px;
         padding-right: 30px;
         font-family: 'Raleway';
         font-weight: 700;
     }
-    &__speaker {
+    &__artist {
         display: flex;
         align-items: center;
         gap: 10px;
     }
-    &__speakers {
+    &__artists {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -195,7 +195,7 @@
     &__network-status-live {
         color: @red;
     } 
-    &__time, &__content, &__speakers {
+    &__time, &__description, &__artists {
         margin: 0;
         padding-top: 30px;
         padding-bottom: 30px;
