@@ -4,10 +4,7 @@ import '../lib/style'
 console.log('Hello World')
 
 let allNumerations = document.querySelectorAll('.events__numeration')
-let allNumsOfMonth = document.querySelectorAll('.events__num-of-month')
 let allLines = document.querySelectorAll('.events__line')
-// let allContents = document.querySelectorAll('.events-table__content')
-// let allUsers = document.querySelectorAll('.events-table__person-name')
 let table = document.querySelectorAll('.events-table__timing')
 let loader = document.querySelector('.events-loader')
 let el
@@ -17,18 +14,13 @@ function makeActiveDay () {
   for (let num of allNumerations) {
     num.style.opacity = '0.5'
   }
-  for (let num of allNumsOfMonth) {
-    num.style.opacity = '0.3'
-  }
   for (let num of allLines) {
     num.style.opacity = '0.1'
   }
 
   let numeration = this.querySelector('.events__numeration')
-  let numOfMonth = this.querySelector('.events__num-of-month')
   let line = this.querySelector('.events__line')
   numeration.style.opacity = '1'
-  numOfMonth.style.opacity = '1'
   line.style.opacity = '1'
 
   for (el of table) {
