@@ -35,6 +35,8 @@ function makeActiveDay () {
 // получаем данные из fetch-запроса
 function getDataFromFetch () {
   fetch('https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=324&apikey=DrArtOzm58BOTnvtou46RbvwbG7uRTCb')
+  .then(res => res.json())
+  .then(r => console.log(r))
   // let res = await data.json()
   // let result = await res['_embedded'].events
   // console.log(result)
