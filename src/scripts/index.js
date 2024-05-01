@@ -36,23 +36,55 @@ function makeActiveDay () {
 function getDataFromFetch () {
   fetch('https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=324&apikey=DrArtOzm58BOTnvtou46RbvwbG7uRTCb')
   .then(res => res.json())
-  .then(r => console.log(r))
-  // let res = await data.json()
-  // let result = await res['_embedded'].events
-  // console.log(result)
-  // let infoEvent = []
-  // result.slice(0, 5).forEach(elem => {
-  //   infoEvent.push([elem.name, elem._embedded.venues[0].name, elem.dates.start.localDate, elem.dates.start.localTime, elem.images[0].url, elem.url])
-  //   infoEvent.slice(0, 5)
-  // })
-  // console.log(infoEvent)
-  // return infoEvent
+  .then(result => result['_embedded'].events)
+  .then(r => {
+    console.log(r)
+    let infoEvent = []
+    r.slice(0, 5).forEach(elem => {
+      infoEvent.push([elem.name, elem._embedded.attractions, elem.dates.start.localDate, elem.dates.start.localTime, elem.url])
+      infoEvent.slice(0, 5)
+    })
+    console.log(infoEvent)
+    return infoEvent
+  })
 }
 
-getDataFromFetch()
+console.log(getDataFromFetch())
+
+// создаём динамически элементы разметки с данными, полученными асинхронно
+// function createDinamicElements () {
+//   getDataFromFetch()
+//   .then(events => {
+//     events.forEach(el => {
+//       const artistName = document.createElement('div')
+//       artistName.classList.add('events-table__person-name')
+//       artistName.textContent = el[0]
+//       const location = document.createElement('div')
+//       location.classList.add('events-table__description')
+//       location.textContent = el[1]
+//       const localDate = document.createElement('p')
+//       localDate.classList.add('events-table__fulltime')
+//       localDate.textContent = el[2].split('-').reverse().join('-')
+//       const localTime = document.createElement('p')
+//       localTime.classList.add('events-table__datetime')
+//       localTime.textContent = el[3]
+
+//       let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${location.outerHTML}<div class="events-table__artist">${artistName.outerHTML}`
+//       let div = document.createElement('div')
+//       div.classList.add('events-table__timing')
+//       div.innerHTML = tableData
+//       table.append(div)
+//     })
+//   })
+// }
 
 document.querySelectorAll('.events__date').forEach((elem) => {
   elem.addEventListener('click', makeActiveDay)
+})
+
+// при загрузке страницы сразу отправляем запрос на сервер и запрашиваем данные, отображаем в таблице
+window.addEventListener('load', () => {
+  // createDinamicElements()
 })
 
 // eslint-disable-next-line no-unused-vars
