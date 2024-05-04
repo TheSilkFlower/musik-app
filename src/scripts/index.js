@@ -6,7 +6,7 @@ console.log('Hello World')
 let allNumerations = document.querySelectorAll('.events__numeration')
 let allLines = document.querySelectorAll('.events__line')
 let tableBlock = document.querySelectorAll('.events-table__timing')
-// let table = document.querySelector('.events-table__list')
+let table = document.querySelector('.events-table__list')
 let loader = document.querySelector('.events-loader')
 let el
 
@@ -49,34 +49,31 @@ function getDataFromFetch () {
   })
 }
 
-console.log(getDataFromFetch())
-
 // создаём динамически элементы разметки с данными, полученными асинхронно
-// function createDinamicElements () {
-//   getDataFromFetch()
-//   .then(events => {
-//     events.forEach(el => {
-//       const artistName = document.createElement('div')
-//       artistName.classList.add('events-table__person-name')
-//       artistName.textContent = el[0]
-//       const location = document.createElement('div')
-//       location.classList.add('events-table__description')
-//       location.textContent = el[1]
-//       const localDate = document.createElement('p')
-//       localDate.classList.add('events-table__fulltime')
-//       localDate.textContent = el[2].split('-').reverse().join('-')
-//       const localTime = document.createElement('p')
-//       localTime.classList.add('events-table__datetime')
-//       localTime.textContent = el[3]
+function createDinamicElements () {
+  getDataFromFetch().then(events => {
+    events.forEach(el => {
+      const artistName = document.createElement('div')
+      artistName.classList.add('events-table__person-name')
+      artistName.textContent = el[0]
+      const location = document.createElement('div')
+      location.classList.add('events-table__description')
+      location.textContent = el[1]
+      const localDate = document.createElement('p')
+      localDate.classList.add('events-table__fulltime')
+      localDate.textContent = el[2].split('-').reverse().join('-')
+      const localTime = document.createElement('p')
+      localTime.classList.add('events-table__datetime')
+      localTime.textContent = el[3]
 
-//       let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${location.outerHTML}<div class="events-table__artist">${artistName.outerHTML}`
-//       let div = document.createElement('div')
-//       div.classList.add('events-table__timing')
-//       div.innerHTML = tableData
-//       table.append(div)
-//     })
-//   })
-// }
+      let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${location.outerHTML}<div class="events-table__artist">${artistName.outerHTML}`
+      let div = document.createElement('div')
+      div.classList.add('events-table__timing')
+      div.innerHTML = tableData
+      table.append(div)
+    })
+  })
+}
 
 document.querySelectorAll('.events__date').forEach((elem) => {
   elem.addEventListener('click', makeActiveDay)
@@ -84,7 +81,7 @@ document.querySelectorAll('.events__date').forEach((elem) => {
 
 // при загрузке страницы сразу отправляем запрос на сервер и запрашиваем данные, отображаем в таблице
 window.addEventListener('load', () => {
-  // createDinamicElements()
+  createDinamicElements()
 })
 
 // eslint-disable-next-line no-unused-vars
