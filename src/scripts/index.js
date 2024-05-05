@@ -34,7 +34,7 @@ function makeActiveDay () {
 
 // получаем данные из fetch-запроса
 function getDataFromFetch () {
-  fetch('https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=324&apikey=DrArtOzm58BOTnvtou46RbvwbG7uRTCb')
+  return fetch('https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=324&apikey=DrArtOzm58BOTnvtou46RbvwbG7uRTCb')
   .then(res => res.json())
   .then(result => result['_embedded'].events)
   .then(r => {
@@ -51,21 +51,27 @@ function getDataFromFetch () {
 
 // создаём динамически элементы разметки с данными, полученными асинхронно
 function createDinamicElements () {
-  getDataFromFetch().then(events => {
+  getDataFromFetch()
+  .then(events => {
     events.forEach(el => {
       const artistName = document.createElement('div')
       artistName.classList.add('events-table__person-name')
       artistName.textContent = el[0]
       const location = document.createElement('div')
       location.classList.add('events-table__description')
-      location.textContent = el[1]
+      let arr = []
+      for (let el of el[1]) {
+        arr.push(el.name)
+      }
+      location.textContent = arr.slice(0, 4).join(', ')
       const localDate = document.createElement('p')
       localDate.classList.add('events-table__fulltime')
-      localDate.textContent = el[2].split('-').reverse().join('-')
+      localDate.textContent = el[2].split('-').reverse().join('.')
       const localTime = document.createElement('p')
       localTime.classList.add('events-table__datetime')
-      localTime.textContent = el[3]
+      localTime.textContent = el[3].slice(0, 5)
 
+      // вносим данные из массива в таблицу
       let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${location.outerHTML}<div class="events-table__artist">${artistName.outerHTML}`
       let div = document.createElement('div')
       div.classList.add('events-table__timing')
@@ -79,7 +85,7 @@ document.querySelectorAll('.events__date').forEach((elem) => {
   elem.addEventListener('click', makeActiveDay)
 })
 
-// при загрузке страницы сразу отправляем запрос на сервер и запрашиваем данные, отображаем в таблице
+// при загрузке страницы сразу запрашиваем данные и отображаем в таблице
 window.addEventListener('load', () => {
   createDinamicElements()
 })
