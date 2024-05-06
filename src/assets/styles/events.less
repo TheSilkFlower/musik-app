@@ -182,20 +182,13 @@
         opacity: 0.6;
     }
     &__network {
+        width: -webkit-max-content;
+        width: max-content;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         gap: 10px;
     }
-    &__network-status {
-        margin: 0;
-        text-align: end;
-        font-family: 'Montserrat';
-        font-weight: 700;
-    }
-    &__network-status-live {
-        color: @red;
-    } 
     &__time, &__description, &__artists {
         margin: 0;
         padding-top: 30px;
@@ -214,8 +207,10 @@
             width: 100%;
             padding: 0 20px;
         }
-        &_zigred {
+        &_zigred, &_triangle, &_balls {
             z-index: -1;
+        }
+        &_zigred {
             top: 2000px;
             right: auto;
         }
