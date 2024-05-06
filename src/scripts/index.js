@@ -54,9 +54,9 @@ function createDinamicElements () {
   getDataFromFetch()
   .then(events => {
     events.forEach(el => {
-      const artistName = document.createElement('div')
-      artistName.classList.add('events-table__person-name')
-      artistName.textContent = el[0]
+      const concertName = document.createElement('div')
+      concertName.classList.add('events-table__person-name')
+      concertName.textContent = el[0]
       const location = document.createElement('div')
       location.classList.add('events-table__description')
       let arr = []
@@ -70,9 +70,12 @@ function createDinamicElements () {
       const localTime = document.createElement('p')
       localTime.classList.add('events-table__datetime')
       localTime.textContent = el[3].slice(0, 5)
+      const link = document.createElement('img')
+      link.classList.add('events-table__network-img')
+      link.src = '../assets/images/aiga.svg'
 
       // вносим данные из массива в таблицу
-      let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${location.outerHTML}<div class="events-table__artist">${artistName.outerHTML}`
+      let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${concertName.outerHTML}<div class="events-table__artist">${location.outerHTML}</div><div class="events-table__network">${link.outerHTML}</div>`
       let div = document.createElement('div')
       div.classList.add('events-table__timing')
       div.innerHTML = tableData
