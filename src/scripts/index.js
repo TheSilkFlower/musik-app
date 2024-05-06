@@ -71,11 +71,11 @@ function createDinamicElements () {
       localTime.classList.add('events-table__datetime')
       localTime.textContent = el[3].slice(0, 5)
       const link = document.createElement('img')
-      link.classList.add('events-table__network-img')
+      link.classList.add('events-table__network')
       link.src = '../assets/images/aiga.svg'
 
       // вносим данные из массива в таблицу
-      let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${concertName.outerHTML}<div class="events-table__artist">${location.outerHTML}</div><div class="events-table__network">${link.outerHTML}</div>`
+      let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${concertName.outerHTML}<div class="events-table__artist">${location.outerHTML}</div>${link.outerHTML}`
       let div = document.createElement('div')
       div.classList.add('events-table__timing')
       div.innerHTML = tableData
