@@ -75,7 +75,7 @@ function createDinamicElements () {
       link.href = el[4]
       const linkImg = document.createElement('img')
       linkImg.classList.add('events-table__network-img')
-      linkImg.src = '/static/img/aiga.svg'
+      linkImg.src = '/musik-app/src/assets/images/aiga.svg'
       link.append(linkImg)
 
       // вносим данные из массива в таблицу
