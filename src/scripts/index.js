@@ -8,7 +8,7 @@ let allLines = document.querySelectorAll('.events__line')
 let tableBlock = document.querySelectorAll('.events-table__timing')
 let table = document.querySelector('.events-table__list')
 let loader = document.querySelector('.events-loader')
-let el
+let el // элемент таблицы для скрытия/отображения
 
 // функция для определения активного дня
 function makeActiveDay () {
@@ -75,7 +75,7 @@ function createDinamicElements () {
       link.href = el[4]
       const linkImg = document.createElement('img')
       linkImg.classList.add('events-table__network-img')
-      linkImg.src = '../assets/images/arr2.png'
+      linkImg.src = '/img/arr2.png'
       link.append(linkImg)
 
       // вносим данные из массива в таблицу
