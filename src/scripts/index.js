@@ -75,7 +75,7 @@ function createDinamicElements () {
       link.href = el[4]
       const linkImg = document.createElement('img')
       linkImg.classList.add('events-table__network-img')
-      linkImg.src = '/img/arr2.png'
+      linkImg.src = './img/aiga.svg'
       link.append(linkImg)
 
       // вносим данные из массива в таблицу
