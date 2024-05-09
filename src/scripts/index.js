@@ -38,7 +38,7 @@ function getDataFromFetch () {
   .then(res => res.json())
   .then(result => result['_embedded'].events)
   .then(r => {
-    console.log(r)
+    // console.log(r)
     let infoEvent = []
     r.slice(0, 5).forEach(elem => {
       infoEvent.push([elem.name, elem._embedded.attractions, elem.dates.start.localDate, elem.dates.start.localTime, elem.url])
@@ -57,13 +57,22 @@ function createDinamicElements () {
       const concertName = document.createElement('div')
       concertName.classList.add('events-table__description')
       concertName.textContent = el[0]
-      const location = document.createElement('div')
-      location.classList.add('events-table__artists')
+
+      const artist = document.createElement('div')
+      const artistName = document.createElement('div')
+      const artistImg = document.createElement('img')
+      artistName.classList.add('events-table__artist-name')
+      artistImg.classList.add('events-table__artist-img')
       let arr = []
       for (let el of el[1]) {
-        arr.push(el.name)
+        arr.push([el.images[0].url, el.name])
       }
-      location.textContent = arr.slice(0, 4).join(', ')
+      arr.slice(0, 4)
+      for (let i = 0; i < arr.length; i++) {
+        artistImg.src = arr[i][0]
+        artistName.textContent = arr[i][1]
+      }
+      artist.append(artistImg, artistName)
       const localDate = document.createElement('p')
       localDate.classList.add('events-table__fulltime')
       localDate.textContent = el[2].split('-').reverse().join('.')
@@ -79,7 +88,7 @@ function createDinamicElements () {
       link.append(linkImg)
 
       // вносим данные из массива в таблицу
-      let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${concertName.outerHTML}<div class="events-table__artist">${location.outerHTML}</div>${link.outerHTML}`
+      let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${concertName.outerHTML}<div class="events-table__artists">${artist.outerHTML}</div>${link.outerHTML}`
       let div = document.createElement('div')
       div.classList.add('events-table__timing')
       div.innerHTML = tableData
