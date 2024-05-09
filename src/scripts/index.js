@@ -55,10 +55,10 @@ function createDinamicElements () {
   .then(events => {
     events.forEach(el => {
       const concertName = document.createElement('div')
-      concertName.classList.add('events-table__person-name')
+      concertName.classList.add('events-table__description')
       concertName.textContent = el[0]
       const location = document.createElement('div')
-      location.classList.add('events-table__description')
+      location.classList.add('events-table__artists')
       let arr = []
       for (let el of el[1]) {
         arr.push(el.name)
