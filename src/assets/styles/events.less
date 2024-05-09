@@ -125,7 +125,7 @@
     }
     &__timing {
         display: flex;
-        align-items: baseline;
+        align-items: center;
     }
     &__list {
         position: relative;
@@ -148,16 +148,20 @@
     }
     &__artists {
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: center;
         gap: 20px;
         width: 280px;
+    }
+    &__artist-img {
+        width: 150px;
+        border-radius: 5px;
     }
     &__person {
         width: -webkit-max-content;
         width: max-content;
     }
-    &__person-name {
+    &__artist-name {
         font-family: 'Raleway';
         font-weight: 700;
     }
