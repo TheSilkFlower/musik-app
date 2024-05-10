@@ -123,9 +123,11 @@ function createDinamicElements () {
       // вносим данные из массива в таблицу
       let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${concertName.outerHTML}${artists.outerHTML}${link.outerHTML}`
       let div = document.createElement('div')
+      let line = document.createElement('div')
+      line.classList.add('events-table__line')
       div.classList.add('events-table__timing')
       div.innerHTML = tableData
-      table.append(div)
+      table.append(div, line)
     })
   })
 }
