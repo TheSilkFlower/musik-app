@@ -40,11 +40,11 @@ function getDataFromFetch () {
   .then(r => {
     // console.log(r)
     let infoEvent = []
-    r.slice(0, 5).forEach(elem => {
+    r.slice(0, 15).forEach(elem => {
       infoEvent.push([elem.name, elem._embedded.attractions, elem.dates.start.localDate, elem.dates.start.localTime, elem.url])
-      infoEvent.slice(0, 5)
     })
-    // console.log(infoEvent)
+    infoEvent = infoEvent.slice(0, 5)
+    console.log(infoEvent)
     return infoEvent
   })
 }
@@ -67,6 +67,7 @@ function createDinamicElements () {
       for (let el of el[1]) {
         arr.push([el.images[0].url, el.name])
       }
+      // выбираем до 4 элементов массива и из каждого записываем в разметку имя артиста + путь к картинке
       arr.slice(0, 4).forEach(elem => {
         artistImg.src = elem[0]
         artistName.textContent = elem[1]
