@@ -3,14 +3,30 @@
 import '../lib/style'
 console.log('Hello World')
 
-let day
+let day = 1
 let days = document.querySelectorAll('.events__date')
 let allNumerations = document.querySelectorAll('.events__numeration')
 let allLines = document.querySelectorAll('.events__line')
-let tableBlock = document.querySelectorAll('.events-table__timing')
 let table = document.querySelector('.events-table__list')
 let loader = document.querySelector('.events-loader')
-let el // элемент таблицы для скрытия/отображения
+
+// находим индекс выбранного дня и по нему присваиваем переменной day номер 1/2/3
+days.forEach((elem, i) => {
+  elem.addEventListener('click', () => {
+    switch (i) {
+      case 0:
+        day = 1
+        break
+      case 1:
+        day = 2
+        break
+      case 2:
+        day = 3
+        break
+    }
+    return day
+  })
+})
 
 // функция для определения активного дня
 function makeActiveDay () {
@@ -26,12 +42,15 @@ function makeActiveDay () {
   numeration.style.opacity = '1'
   line.style.opacity = '1'
 
-  // скрываем данные таблицы
-  for (el of tableBlock) {
-    el.style.opacity = 0
-  }
-  // отображаем лоадер
+  // очищаем таблицу и покаызываем лоадер
+  table.innerHTML = ''
   loader.style.display = 'block'
+
+  // по истечении 2 секунд скрываем лоадер и заполняем таблицу данными
+  setTimeout(() => {
+    loader.style.display = 'none'
+    createDinamicElements()
+  }, 2000)
 }
 
 // получаем данные из fetch-запроса
@@ -45,14 +64,26 @@ function getDataFromFetch () {
     r.slice(0, 15).forEach(elem => {
       infoEvent.push([elem.name, elem._embedded.attractions, elem.dates.start.localDate, elem.dates.start.localTime, elem.url])
     })
-    infoEvent = infoEvent.slice(0, 5)
-    console.log(infoEvent)
     return infoEvent
+  }).then(info => { // в зависимости от текущего дня оставляем нужные 5 events
+    switch (day) {
+      case 1:
+        info = info.slice(0, 5)
+        break
+      case 2:
+        info = info.slice(5, 10)
+        break
+      case 3:
+        info = info.slice(10, 15)
+        break
+    }
+    return info
   })
 }
 
 // создаём динамически элементы разметки с данными, полученными асинхронно
 function createDinamicElements () {
+  table.innerHTML = ''
   getDataFromFetch()
   .then(events => {
     events.forEach(el => {
@@ -99,22 +130,8 @@ function createDinamicElements () {
   })
 }
 
-days.forEach((elem, i) => {
+days.forEach((elem) => {
   elem.addEventListener('click', makeActiveDay)
-  elem.addEventListener('click', () => {
-    switch (i) {
-      case 0:
-        day = 1
-        break
-      case 1:
-        day = 2
-        break
-      case 2:
-        day = 3
-        break
-    }
-    return day
-  })
 })
 
 // при загрузке страницы сразу запрашиваем данные и отображаем в таблице
