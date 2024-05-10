@@ -3,6 +3,8 @@
 import '../lib/style'
 console.log('Hello World')
 
+let day
+let days = document.querySelectorAll('.events__date')
 let allNumerations = document.querySelectorAll('.events__numeration')
 let allLines = document.querySelectorAll('.events__line')
 let tableBlock = document.querySelectorAll('.events-table__timing')
@@ -97,8 +99,22 @@ function createDinamicElements () {
   })
 }
 
-document.querySelectorAll('.events__date').forEach((elem) => {
+days.forEach((elem, i) => {
   elem.addEventListener('click', makeActiveDay)
+  elem.addEventListener('click', () => {
+    switch (i) {
+      case 0:
+        day = 1
+        break
+      case 1:
+        day = 2
+        break
+      case 2:
+        day = 3
+        break
+    }
+    return day
+  })
 })
 
 // при загрузке страницы сразу запрашиваем данные и отображаем в таблице
