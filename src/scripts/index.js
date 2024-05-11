@@ -3,10 +3,11 @@
 import '../lib/style'
 console.log('Hello World')
 
-let day = 1
+let day = 1 // переменная, содержащая номер дня в табличке, по умолчанию на значении 1
 let days = document.querySelectorAll('.events__date')
 let allNumerations = document.querySelectorAll('.events__numeration')
 let allLines = document.querySelectorAll('.events__line')
+let tableHeader = document.querySelector('.events-table__header')
 let table = document.querySelector('.events-table__list')
 let loader = document.querySelector('.events-loader')
 
@@ -46,9 +47,12 @@ function makeActiveDay () {
   table.innerHTML = ''
   loader.style.display = 'block'
 
+  // на время загрузки показываем скруглённую рамку для header
+  tableHeader.style.borderBottomLeftRadius = '24px'
+  tableHeader.style.borderBottomRightRadius = '24px'
+
   // по истечении 2 секунд скрываем лоадер и заполняем таблицу данными
   setTimeout(() => {
-    loader.style.display = 'none'
     createDinamicElements()
   }, 2000)
 }
@@ -84,6 +88,8 @@ function getDataFromFetch () {
 // создаём динамически элементы разметки с данными, полученными асинхронно
 function createDinamicElements () {
   table.innerHTML = ''
+  tableHeader.style.borderBottomLeftRadius = 'inherit'
+  tableHeader.style.borderBottomRightRadius = 'inherit'
   getDataFromFetch()
   .then(events => {
     events.forEach(el => {
@@ -130,10 +136,10 @@ function createDinamicElements () {
           priceCurr.textContent = el[5][0].currency
           price.append(priceCurr)
         } else {
-          price.textContent = 'There is no exact information yet'
+          price.textContent = '$ There is no exact information yet'
         }
       } else {
-        price.textContent = 'There is no exact information yet'
+        price.textContent = '$ There is no exact information yet'
       }
       const place = document.createElement('p')
       place.classList.add('events-table__description-place')
@@ -147,6 +153,8 @@ function createDinamicElements () {
       div.classList.add('events-table__timing')
       div.innerHTML = tableData
       table.append(div, line)
+
+      loader.style.display = 'none'
     })
   })
 }
@@ -158,6 +166,7 @@ days.forEach((elem) => {
 
 // при загрузке страницы сразу запрашиваем данные и отображаем в таблице
 window.addEventListener('load', () => {
+  loader.style.display = 'block'
   createDinamicElements()
 })
 
