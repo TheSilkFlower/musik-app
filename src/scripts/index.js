@@ -115,6 +115,7 @@ function createDinamicElements () {
       const link = document.createElement('a')
       link.classList.add('events-table__network')
       link.href = el[4]
+      link.target = '_blank'
       const linkImg = document.createElement('img')
       linkImg.classList.add('events-table__network-img')
       linkImg.src = '/musik-app/src/assets/images/aiga.svg'
