@@ -4,12 +4,12 @@ import '../lib/style'
 console.log('Hello World')
 
 let day = 1 // переменная, содержащая номер дня в табличке, по умолчанию на значении 1
-let days = document.querySelectorAll('.events__date')
-let allNumerations = document.querySelectorAll('.events__numeration')
-let allLines = document.querySelectorAll('.events__line')
-let tableHeader = document.querySelector('.events-table__header')
-let table = document.querySelector('.events-table__list')
-let loader = document.querySelector('.events-loader')
+const days = document.querySelectorAll('.events__date')
+const allNumerations = document.querySelectorAll('.events__numeration')
+const allLines = document.querySelectorAll('.events__line')
+const tableHeader = document.querySelector('.events-table__header')
+const table = document.querySelector('.events-table__list')
+const loader = document.querySelector('.events-loader')
 
 // находим индекс выбранного дня и по нему присваиваем переменной day номер 1/2/3
 days.forEach((elem, i) => {
@@ -88,8 +88,6 @@ function getDataFromFetch () {
 // создаём динамически элементы разметки с данными, полученными асинхронно
 function createDinamicElements () {
   table.innerHTML = ''
-  tableHeader.style.borderBottomLeftRadius = 'inherit'
-  tableHeader.style.borderBottomRightRadius = 'inherit'
   getDataFromFetch()
   .then(events => {
     events.forEach(el => {
@@ -154,6 +152,8 @@ function createDinamicElements () {
       div.innerHTML = tableData
       table.append(div, line)
 
+      tableHeader.style.borderBottomLeftRadius = 'inherit'
+      tableHeader.style.borderBottomRightRadius = 'inherit'
       loader.style.display = 'none'
     })
   })
