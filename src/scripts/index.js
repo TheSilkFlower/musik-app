@@ -59,10 +59,9 @@ function getDataFromFetch () {
   .then(res => res.json())
   .then(result => result['_embedded'].events)
   .then(r => {
-    // console.log(r)
     let infoEvent = []
     r.slice(0, 15).forEach(elem => {
-      infoEvent.push([elem.name, elem._embedded.attractions, elem.dates.start.localDate, elem.dates.start.localTime, elem.url])
+      infoEvent.push([elem.name, elem._embedded.attractions, elem.dates.start.localDate, elem.dates.start.localTime, elem.url, elem.priceRanges, elem._embedded.venues[0]])
     })
     return infoEvent
   }).then(info => { // в зависимости от текущего дня оставляем нужные 5 events
@@ -77,6 +76,7 @@ function getDataFromFetch () {
         info = info.slice(10, 15)
         break
     }
+    console.log(info)
     return info
   })
 }
@@ -87,8 +87,8 @@ function createDinamicElements () {
   getDataFromFetch()
   .then(events => {
     events.forEach(el => {
-      const concertName = document.createElement('div')
-      concertName.classList.add('events-table__description')
+      const concertName = document.createElement('p')
+      concertName.classList.add('events-table__description-event')
       concertName.textContent = el[0]
       const artists = document.createElement('div')
       const artistName = document.createElement('div')
@@ -119,9 +119,23 @@ function createDinamicElements () {
       linkImg.classList.add('events-table__network-img')
       linkImg.src = '/musik-app/src/assets/images/aiga.svg'
       link.append(linkImg)
+      const price = document.createElement('p')
+      const priceCurr = document.createElement('span')
+      price.classList.add('events-table__description-price')
+      priceCurr.classList.add('events-table__description-price-curr')
+      if (el[5] !== undefined) { // если получено/имеется значение priceRanges - выводим информацию о стоимости
+        price.textContent = `min: ${el[5][0].min}, max: ${el[5][0].max}, `
+        priceCurr.textContent = el[5][0].currency
+        price.append(priceCurr)
+      } else {
+        price.textContent = 'There is no exact information yet'
+      }
+      const place = document.createElement('p')
+      place.classList.add('events-table__description-place')
+      place.textContent = `${el[6].address.line1}, ${el[6].name}, ${el[6].city.name}, ${el[6].state.name}`
 
       // вносим данные из массива в таблицу
-      let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div>${concertName.outerHTML}${artists.outerHTML}${link.outerHTML}`
+      let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div><div class="events-table__description">${concertName.outerHTML}${price.outerHTML}${place.outerHTML}</div>${artists.outerHTML}${link.outerHTML}`
       let div = document.createElement('div')
       let line = document.createElement('div')
       line.classList.add('events-table__line')
@@ -132,6 +146,7 @@ function createDinamicElements () {
   })
 }
 
+// по клику на день в таблице событий запускаем функцию makeActiveDay
 days.forEach((elem) => {
   elem.addEventListener('click', makeActiveDay)
 })
