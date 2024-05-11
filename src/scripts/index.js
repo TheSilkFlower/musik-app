@@ -124,9 +124,13 @@ function createDinamicElements () {
       price.classList.add('events-table__description-price')
       priceCurr.classList.add('events-table__description-price-curr')
       if (el[5] !== undefined) { // если получено/имеется значение priceRanges - выводим информацию о стоимости
-        price.textContent = `min: ${el[5][0].min}, max: ${el[5][0].max}, `
-        priceCurr.textContent = el[5][0].currency
-        price.append(priceCurr)
+        if (el[5][0].min !== undefined && el[5][0].max !== undefined) {
+          price.textContent = `min: ${el[5][0].min}, max: ${el[5][0].max}, `
+          priceCurr.textContent = el[5][0].currency
+          price.append(priceCurr)
+        } else {
+          price.textContent = 'There is no exact information yet'
+        }
       } else {
         price.textContent = 'There is no exact information yet'
       }
