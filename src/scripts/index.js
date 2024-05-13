@@ -122,7 +122,7 @@ function createDinamicElements () {
       link.target = '_blank'
       const linkImg = document.createElement('img')
       linkImg.classList.add('events-table__network-img')
-      linkImg.src = '/musik-app/src/assets/images/aiga.svg'
+      linkImg.src = '/musik-app/src/assets/images/aiga2.svg'
       link.append(linkImg)
       const price = document.createElement('p')
       const priceCurr = document.createElement('span')
