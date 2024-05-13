@@ -4,7 +4,7 @@ mixin button(theme, value, src)
             img(src=`../assets/images/${src}.png`)
 
 mixin logotype  
-    a(href="#")
+    a(href="music")
       img(src="../assets/images/logo.svg", alt="Logo")
 
 mixin infoblock(className, name, value)
@@ -14,10 +14,10 @@ mixin infoblock(className, name, value)
 mixin link(el, i)
     li 
         if (i)
-            a(href="#")= el 
+            a(href=`${el}`)= el 
             img(src="../assets/images/arrow-down.png", class="arrow-down") 
         else 
-            a(href="#")= el
+            a(href=`${el.replace(/\s+/g, '')}`)= el
 
 mixin melody(color, src, name, textColor, swiper)
     if (swiper)
@@ -58,7 +58,7 @@ mixin brand(sponsorName)
     img.sponsors-brands__logo(src=`../assets/images/${sponsorName}.png`, alt="Sponsor")
 
 mixin media(src)
-    a(href="#")
+    a(href=`${src}`)
       img.footer-info__socials-media(src=`../assets/images/${src}.svg`, alt="Media")
 
 mixin instashot(src)
@@ -111,23 +111,3 @@ mixin event(num)
     .events__date
         .events__numeration= num
         .events__line
-
-mixin speaker(src, name, value)
-    .events-table__artist
-        img.events-table__person-img(src=`../assets/images/${src}.png`, alt="Speaker")
-        .events-table__person
-            .events-table__person-name= name 
-            .events-table__person-stand
-                p.events-table__person-booth= 'Booth:'
-                p.events-table__person-value= value
-
-
-mixin network(src, network)
-    .events-table__network
-        p.events-table__network-status(class=`events-table__network-status-${src}`)= network
-        img.events-table__network-img(src=`../assets/images/${src}.png`, alt="Network")
-
-mixin basic(time, description)
-    p.events-table__time= time 
-    p.events-table__description= description 
-    
