@@ -134,10 +134,10 @@ function createDinamicElements () {
           priceCurr.textContent = el[5][0].currency
           price.append(priceCurr)
         } else {
-          price.textContent = '$ There is no exact information yet'
+          price.textContent = ''
         }
       } else {
-        price.textContent = '$ There is no exact information yet'
+        price.textContent = ''
       }
       const place = document.createElement('p')
       place.classList.add('events-table__description-place')
