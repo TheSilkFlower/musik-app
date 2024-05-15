@@ -3,7 +3,7 @@ include ../partials/mixins
 .mentions  
     .mentions__wrapper 
         h3.mentions__title Testimonials
-        .mentions__block
+        //- .mentions__block
             +mention('ava', 'Ellie James', 'lorem.com')
             +mention('ava2', 'Jhonny Doe', 'ipsum.com')
             +mention('ava3', 'Myne Barack', 'ipsum.com')
@@ -15,8 +15,6 @@ include ../partials/mixins
                     +mention('ava2', 'Jhonny Doe', 'ipsum.com')
                 .swiper-slide.mention-slide
                     +mention('ava3', 'Myne Barack', 'ipsum.com')
-            .swiper-button-prev.mention-prev 
+            .swiper-button-prev.mention-prev
             .swiper-button-next.mention-next
-            //- .swiper-button-prev 
-            //- .swiper-button-next
 
