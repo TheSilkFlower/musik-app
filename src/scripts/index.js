@@ -175,13 +175,13 @@ const genres = new window.Swiper('.genres-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
   navigation: {
-    prevEl: '.swiper-button-prev',
-    nextEl: '.swiper-button-next'
+    prevEl: '.genres-prev',
+    nextEl: '.genres-next'
   }
 })
 
 // eslint-disable-next-line no-unused-vars
-const aboutSwiper = new window.Swiper('.about-swiper', {
+const about = new window.Swiper('.about-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
   loop: false,
@@ -200,8 +200,8 @@ const singer = new window.Swiper('.singer-swiper', {
     delay: 5000
   },
   navigation: {
-    prevEl: '.swiper-button-prev',
-    nextEl: '.swiper-button-next'
+    prevEl: '.singer-prev',
+    nextEl: '.singer-next'
   }
 })
 
@@ -214,8 +214,8 @@ const mention = new window.Swiper('.mention-swiper', {
   centeredSlides: true,
   initialSlide: 1,
   navigation: {
-    prevEl: '.swiper-button-prev',
-    nextEl: '.swiper-button-next'
+    prevEl: '.mention-prev',
+    nextEl: '.mention-next'
   }
 })
 
@@ -233,10 +233,6 @@ const gallery = new window.Swiper('.gallery-swiper', {
     depth: 100,
     modifier: 1,
     slideShadows: true
-  },
-  navigation: {
-    prevEl: '.swiper-button-prev',
-    nextEl: '.swiper-button-next'
   }
 }
 )
