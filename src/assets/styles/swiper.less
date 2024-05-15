@@ -7,8 +7,25 @@
 .singer-swiper {
     display: none;
 }
-.mention-swiper {
+.mention-slide {
+    opacity: .3;
+    display: flex;
+    justify-content: center;
+}
+.swiper-slide-active {
+    opacity: 1;
+}
+.mention-mobile-swiper {
     display: none;
+}
+.mention-prev, .mention-next {
+    color: @dark;
+}
+.mention-prev {
+    left: 100px;
+}
+.mention-next {
+    right: 100px;
 }
 .gallery-swiper {
     display: none;
@@ -57,16 +74,19 @@
     }
 
     .mention-swiper {
+        display: none;
+    }
+    .mention-mobile-swiper {
         display: flex;
         width: 100%;
     }
-    .mention-slide {
+    .mention-mobile-slide {
         opacity: .3;
     }
     .swiper-slide-active {
         opacity: 1;
     }
-    .mention-prev, .mention-next {
+    .mention-mobile-prev, .mention-mobile-next {
         color: @dark;
     }
 
