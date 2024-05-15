@@ -181,17 +181,6 @@ const genres = new window.Swiper('.genres-swiper', {
 })
 
 // eslint-disable-next-line no-unused-vars
-const about = new window.Swiper('.about-swiper', {
-  direction: 'horizontal',
-  slidesPerView: 1,
-  loop: false,
-  effect: 'cards',
-  autoplay: {
-    delay: 4000
-  }
-})
-
-// eslint-disable-next-line no-unused-vars
 const singer = new window.Swiper('.singer-swiper', {
   direction: 'horizontal',
   loop: true,
