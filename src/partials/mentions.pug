@@ -3,11 +3,7 @@ include ../partials/mixins
 .mentions  
     .mentions__wrapper 
         h3.mentions__title Testimonials
-        //- .mentions__block
-            +mention('ava', 'Ellie James', 'lorem.com')
-            +mention('ava2', 'Jhonny Doe', 'ipsum.com')
-            +mention('ava3', 'Myne Barack', 'ipsum.com')
-        .swiper.mention-swiper 
+        .swiper.mention-swiper
             .swiper-wrapper.mention-wrapper
                 .swiper-slide.mention-slide
                     +mention('ava', 'Ellie James', 'lorem.com')
@@ -17,4 +13,14 @@ include ../partials/mixins
                     +mention('ava3', 'Myne Barack', 'ipsum.com')
             .swiper-button-prev.mention-prev
             .swiper-button-next.mention-next
+        .swiper.mention-mobile-swiper 
+            .swiper-wrapper.mention-wrapper
+                .swiper-slide.mention-mobile-slide
+                    +mention('ava', 'Ellie James', 'lorem.com')
+                .swiper-slide.mention-mobile-slide
+                    +mention('ava2', 'Jhonny Doe', 'ipsum.com')
+                .swiper-slide.mention-mobile-slide
+                    +mention('ava3', 'Myne Barack', 'ipsum.com')
+            .swiper-button-prev.mention-mobile-prev
+            .swiper-button-next.mention-mobile-next
 
