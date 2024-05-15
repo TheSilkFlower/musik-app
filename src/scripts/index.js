@@ -198,13 +198,26 @@ const singer = new window.Swiper('.singer-swiper', {
 const mention = new window.Swiper('.mention-swiper', {
   direction: 'horizontal',
   loop: false,
-  spaceBetween: 20,
-  slidesPerView: 1.8,
+  slidesPerView: 2,
   centeredSlides: true,
   initialSlide: 1,
   navigation: {
     prevEl: '.mention-prev',
     nextEl: '.mention-next'
+  }
+})
+
+// eslint-disable-next-line no-unused-vars
+const mention2 = new window.Swiper('.mention-mobile-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  spaceBetween: 20,
+  slidesPerView: 1.8,
+  centeredSlides: true,
+  initialSlide: 1,
+  navigation: {
+    prevEl: '.mention-mobile-prev',
+    nextEl: '.mention-mobile-next'
   }
 })
 
