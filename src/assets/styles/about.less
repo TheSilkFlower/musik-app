@@ -74,7 +74,7 @@
         text-align: center;
     }
     .about__pics {
-        display: none;
+        // display: none;
         width: 100%;
     }
     .about__info {
@@ -85,17 +85,25 @@
         padding-top: 30px;
     }
     .about__wrapper-img {
+        position: relative;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 30px;
+        justify-content: center;
         padding-bottom: 30px;
         width: 100%;
-        height: auto;
     }
     .about__pics-img1, .about__pics-img2 {
-        position: static;
-        width: 100%;
+        width: 90%;
+    }
+    .about__pics-img1 {
+        position: relative;
+        top: 0;
+        left: 20px;
+    }
+    .about__pics-img2 {
+        position: absolute;
+        top: -20px;
+        left: 10px;
     }
     .about_zigzag {
         display: none;
