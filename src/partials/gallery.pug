@@ -5,12 +5,6 @@ include /partials/mixins
         h3.gallery__title See our Best Shots
         .gallery__logo 
             img.gallery__logo-inst(src="../assets/images/vector.svg", alt="Logo")
-        section.gallery-cards
-            +instashot('shot1')
-            +instashot('shot2')
-            +instashot('shot3')
-            +instashot('shot4')
-            +instashot('shot5')
         .swiper.gallery-swiper 
             .swiper-wrapper.gallery-wrapper 
                 .swiper-slide.gallery-slide 
@@ -22,5 +16,19 @@ include /partials/mixins
                 .swiper-slide.gallery-slide 
                     +instashot('shot4')
                 .swiper-slide.gallery-slide 
+                    +instashot('shot5')
+            .swiper-button-prev.gallery-prev
+            .swiper-button-next.gallery-next
+        .swiper.gallery-mobile-swiper 
+            .swiper-wrapper.gallery-wrapper 
+                .swiper-slide.gallery-mobile-slide 
+                    +instashot('shot1')
+                .swiper-slide.gallery-mobile-slide 
+                    +instashot('shot2')
+                .swiper-slide.gallery-mobile-slide 
+                    +instashot('shot3')
+                .swiper-slide.gallery-mobile-slide 
+                    +instashot('shot4')
+                .swiper-slide.gallery-mobile-slide 
                     +instashot('shot5')
 
