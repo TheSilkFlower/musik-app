@@ -185,12 +185,9 @@ const singer = new window.Swiper('.singer-swiper', {
   direction: 'horizontal',
   loop: true,
   spaceBetween: 5,
+  grabCursor: true,
   autoplay: {
-    delay: 5000
-  },
-  navigation: {
-    prevEl: '.singer-prev',
-    nextEl: '.singer-next'
+    delay: 2000
   }
 })
 
