@@ -27,8 +27,23 @@
 .mention-next {
     right: 100px;
 }
-.gallery-swiper {
+.gallery-mobile-swiper {
     display: none;
+}
+.gallery-slide {
+    margin-right: 0px;
+    display: flex;
+    justify-content: center;
+}
+.gallery-prev {
+    left: 50px;
+}
+.gallery-next {
+    right: 50px;
+}
+.gallery-prev, .gallery-next {
+    top: 40%;
+    color: @light;
 }
 
 @media screen and (max-width: 1200px) {
@@ -46,12 +61,8 @@
     .genres-slide {
         display: flex;
         width: 100%;
-        // max-width: 350px;
         justify-content: center;
         opacity: .5;
-    }
-    .swiper-slide-active {
-        opacity: 1;
     }
     }
     
@@ -91,6 +102,9 @@
     }
 
     .gallery-swiper {
+        display: none;
+    }
+    .gallery-mobile-swiper {
         display: flex;
         width: 100%;
     }
