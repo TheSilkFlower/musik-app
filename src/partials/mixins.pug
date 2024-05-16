@@ -63,7 +63,8 @@ mixin media(src)
 
 mixin instashot(src)
     .gallery-cards__block
-        img.gallery-cards__card(src=`../assets/images/${src}.png`, alt="Card")
+        .gallery-cards__card
+            img.gallery-cards__card-img(src=`../assets/images/${src}.png`, alt="Card")
         .gallery-cards__info   
             .gallery-cards__mark
                 .gallery-cards__likes 
