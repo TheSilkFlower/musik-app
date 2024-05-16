@@ -208,7 +208,7 @@ const mention = new window.Swiper('.mention-swiper', {
 })
 
 // eslint-disable-next-line no-unused-vars
-const mention2 = new window.Swiper('.mention-mobile-swiper', {
+const mentionMobile = new window.Swiper('.mention-mobile-swiper', {
   direction: 'horizontal',
   loop: false,
   spaceBetween: 20,
@@ -223,6 +223,19 @@ const mention2 = new window.Swiper('.mention-mobile-swiper', {
 
 // eslint-disable-next-line no-unused-vars
 const gallery = new window.Swiper('.gallery-swiper', {
+  loop: true,
+  grabCursor: true,
+  slidesPerView: 3,
+  initialSlide: 1,
+  navigation: {
+    prevEl: '.gallery-prev',
+    nextEl: '.gallery-next'
+  }
+}
+)
+
+// eslint-disable-next-line no-unused-vars
+const galleryMobile = new window.Swiper('.gallery-mobile-swiper', {
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
