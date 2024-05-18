@@ -1,5 +1,5 @@
-mixin button(theme, value, src)
-    button(class='button_' + theme)= value 
+mixin button(theme, value, src, theme2)
+    button(class='button_' + theme, class='button_' + theme2)= value 
         if (src)
             img(src=`../assets/images/${src}.png`)
 
