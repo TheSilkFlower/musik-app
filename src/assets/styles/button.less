@@ -12,7 +12,8 @@
     background-color: @add4;
   }
 
-  .button_blue, .button_blue:hover {
+  .button_blue, .button_blue:hover,
+  .button_white, .button_white:hover {
     transition: .3s;
   }
   
@@ -32,6 +33,11 @@
     align-items: center;
     text-transform: uppercase;
     gap: 12px;
+  }
+
+  .button_white:hover {
+    color: @light;
+    background-color: @red;
   }
   
   .button_blue, .button_white, .button_red {
