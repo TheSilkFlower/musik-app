@@ -8,7 +8,6 @@
     display: none;
 }
 .mention-slide {
-    opacity: .3;
     display: flex;
     justify-content: center;
 }
@@ -39,15 +38,23 @@
     right: 50px;
 }
 .gallery-slide {
+    opacity: .5;
+}
+.swiper-slide-prev,
+.swiper-slide-next {
     opacity: 1;
 }
 .gallery-prev, .gallery-next {
     top: 34%;
     color: @dark;
 }
+.mention-slide {
+    opacity: .3;
+}
 .swiper-slide-active {
     opacity: 1;
 }
+
 
 @media screen and (max-width: 1200px) {
     .genres-swiper {
