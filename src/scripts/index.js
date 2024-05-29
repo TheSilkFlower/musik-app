@@ -2,6 +2,7 @@
 
 import '../lib/style'
 import './swiper'
+import './anchors'
 import { createDinamicElements, makeActiveDay, days, loader } from './eventTable/initTable'
 console.log('Hello World')
 
