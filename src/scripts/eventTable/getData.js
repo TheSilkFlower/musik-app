@@ -3,7 +3,7 @@
 import { day } from './initTable'
 
 // получаем данные из fetch-запроса
-export default function getDataFromFetch () {
+export function getDataFromFetch () {
   return fetch('https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=324&apikey=DrArtOzm58BOTnvtou46RbvwbG7uRTCb')
     .then(res => res.json())
     .then(result => result['_embedded'].events)
