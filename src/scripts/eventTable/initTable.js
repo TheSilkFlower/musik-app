@@ -8,7 +8,7 @@ const allNumerations = document.querySelectorAll('.events__numeration')
 const allLines = document.querySelectorAll('.events__line')
 const tableHeader = document.querySelector('.events-table__header')
 const table = document.querySelector('.events-table__list')
-export const loader = document.querySelector('.events-loader')
+const loader = document.querySelector('.events-loader')
 
 // находим индекс выбранного дня и по нему присваиваем переменной day номер 1/2/3
 days.forEach((elem, i) => {
@@ -56,4 +56,4 @@ function makeActiveDay () {
   }, 2000)
 }
 
-export default { makeActiveDay, days, table, tableHeader, loader }
+export { day, days, makeActiveDay, table, tableHeader, loader }
