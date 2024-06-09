@@ -3,8 +3,8 @@
 import '../lib/style'
 import './swiper'
 import './anchors'
-import { createDinamicElements, makeActiveDay, days, loader } from './eventTable/initTable'
-console.log('Hello World')
+import createDinamicElements from './eventTable/createElements'
+import { makeActiveDay, days, loader } from './eventTable/initTable'
 
 // по клику на день в таблице событий запускаем функцию makeActiveDay
 days.forEach((elem) => {
