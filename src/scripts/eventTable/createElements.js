@@ -1,5 +1,6 @@
 'use strict'
-import { getDataFromFetch, table, tableHeader, loader } from './initTable'
+import { table, tableHeader, loader } from './initTable'
+import { getDataFromFetch } from './getData'
 
 // создаём динамически элементы разметки с данными, полученными асинхронно
 export default function createDinamicElements () {
