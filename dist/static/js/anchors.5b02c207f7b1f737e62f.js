@@ -1,0 +1,1 @@
+webpackJsonp([5,6],{56:function(e,t,o){"use strict";document.querySelector(".button_red").addEventListener("click",function(){document.querySelector("#target-anchor").scrollIntoView({behavior:"smooth"})})}},[56]);
