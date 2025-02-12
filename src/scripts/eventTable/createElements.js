@@ -59,15 +59,16 @@ export default function createDinamicElements () {
         const place = document.createElement('p')
         place.classList.add('events-table__description-place')
         place.textContent = `${el[6].address.line1}, ${el[6].name}, ${el[6].city.name}, ${el[6].state.name}`
+
         // вносим данные из массива в таблицу
         let tableData = `<div class="events-table__time">${localDate.outerHTML}${localTime.outerHTML}</div><div class="events-table__description">${concertName.outerHTML}${price.outerHTML}${place.outerHTML}</div>${artists.outerHTML}${link.outerHTML}`
         let div = document.createElement('div')
         let line = document.createElement('div')
+        
         line.classList.add('events-table__line')
         div.classList.add('events-table__timing')
         div.innerHTML = tableData
         table.append(div, line)
-
         tableHeader.style.borderBottomLeftRadius = 'inherit'
         tableHeader.style.borderBottomRightRadius = 'inherit'
         loader.style.display = 'none'
