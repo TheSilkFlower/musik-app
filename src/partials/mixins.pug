@@ -1,11 +1,11 @@
 mixin button(theme, value, src, theme2)
     button(class='button_' + theme, class='button_' + theme2)= value 
         if (src)
-            img(src=`../assets/images/${src}.png`)
+            img(src=`../assets/images/${src}.png`, loading="lazy")
 
 mixin logotype  
     a(href="music")
-      img(src="../assets/images/logo.svg", alt="Logo")
+      img(src="../assets/images/logo.svg", loading="lazy", alt="Logo")
 
 mixin infoblock(className, name, value)
     h2(class=className + '__caption')= name
@@ -15,7 +15,7 @@ mixin link(el, i)
     li 
         if (i)
             a(href=`${el}`)= el 
-            img(src="../assets/images/arrow-down.png", class="arrow-down") 
+            img(src="../assets/images/arrow-down.png", loading="lazy", class="arrow-down") 
         else 
             a(href=`${el.replace(/\s+/g, '')}`)= el
 
@@ -29,7 +29,7 @@ mixin melody(color, src, name, textColor, swiper)
                         p.genres-elements__name.genres-elements__name-color= name
                         p.genres-elements__view.genres-elements__view-color Duis aute irure dolor in reprehenderit in voluptate velit esse
                     else
-                        img.genres-elements__img(src=`../assets/images/${src}.png`, alt="Melody")
+                        img.genres-elements__img(src=`../assets/images/${src}.png`, loading="lazy", alt="Melody")
                         p.genres-elements__name= name
                         p.genres-elements__view Duis aute irure dolor in reprehenderit in voluptate velit esse
     else 
@@ -40,12 +40,12 @@ mixin melody(color, src, name, textColor, swiper)
                     p.genres-elements__name.genres-elements__name-color= name
                     p.genres-elements__view.genres-elements__view-color Duis aute irure dolor in reprehenderit in voluptate velit esse
                 else
-                    img.genres-elements__img(src=`../assets/images/${src}.png`, alt="Melody")
+                    img.genres-elements__img(src=`../assets/images/${src}.png`, loading="lazy", alt="Melody")
                     p.genres-elements__name= name
                     p.genres-elements__view Duis aute irure dolor in reprehenderit in voluptate velit esse
 
 mixin confetti(src, cl)
-    img(src=`../assets/images/${src}.png`, alt="Confetti", class=cl)
+    img(src=`../assets/images/${src}.png`, loading="lazy", alt="Confetti", class=cl)
 
 mixin tariff(rate, cost, seat, colorType)
     h3.price-card__caption(class=`price-card__caption-${colorType}`)= rate  
@@ -55,30 +55,30 @@ mixin tariff(rate, cost, seat, colorType)
     p.price-card__eats(class=`price-card__eats-${colorType}`)= 'Free Food & Coffee'
 
 mixin brand(sponsorName)
-    img.sponsors-brands__logo(src=`../assets/images/${sponsorName}.png`, alt="Sponsor")
+    img.sponsors-brands__logo(src=`../assets/images/${sponsorName}.png`, loading="lazy", alt="Sponsor")
 
 mixin media(src)
     a(href=`${src}`)
-      img.footer-info__socials-media(src=`../assets/images/${src}.svg`, alt="Media")
+      img.footer-info__socials-media(src=`../assets/images/${src}.svg`, loading="lazy", alt="Media")
 
 mixin instashot(src)
     .gallery-cards__block
         .gallery-cards__card
-            img.gallery-cards__card-img(src=`../assets/images/${src}.png`, alt="Card")
+            img.gallery-cards__card-img(src=`../assets/images/${src}.png`, loading="lazy", alt="Card")
         .gallery-cards__info   
             .gallery-cards__mark
                 .gallery-cards__likes 
-                    img.gallery-cards__likes-i1(src="../assets/images/heart.svg", alt="Like")
+                    img.gallery-cards__likes-i1(src="../assets/images/heart.svg", loading="lazy", alt="Like")
                     h5.gallery-cards__num #[b 140]
                 .gallery-cards__comments
-                    img.gallery-cards__likes-i2(src="../assets/images/chat.svg", alt="Chat")
+                    img.gallery-cards__likes-i2(src="../assets/images/chat.svg", loading="lazy", alt="Chat")
                     h5.gallery-cards__num #[b 412]
         span.gallery-cards__part Lorem Ipsum Amet
         span.gallery-cards__hash #music #concert #conference #london #event #artist #dj #soundtrack #dance
 
 mixin sign(src, text)
     .contacts-signs
-        img.contacts-signs__img(src=`../assets/images/${src}.png`, alt="Logo")
+        img.contacts-signs__img(src=`../assets/images/${src}.png`, loading="lazy", alt="Logo")
         p.contacts-signs__text= text
 
 mixin data(title, src, type)
@@ -86,11 +86,11 @@ mixin data(title, src, type)
         if (type)
             h4.contacts-about__title= title
             textarea.contacts-about__text(name="area", cols="30", rows="4")
-            img.contacts-about__img(src=`../assets/images/${src}.png`, alt="Line")
+            img.contacts-about__img(src=`../assets/images/${src}.png`, loading="lazy", alt="Line")
         else 
             h4.contacts-about__title= title
             input.contacts-about__text
-            img.contacts-about__img(src=`../assets/images/${src}.png`, alt="Line")
+            img.contacts-about__img(src=`../assets/images/${src}.png`, loading="lazy", alt="Line")
 
 mixin mention(src, name, site)
         .wrapper
@@ -98,12 +98,12 @@ mixin mention(src, name, site)
                 .mentions__info 
                     .mentions__comment
                         .mentions__quote
-                            img(src="../assets/images/uot.png", alt="Quotes")
+                            img(src="../assets/images/uot.png", loading="lazy", alt="Quotes")
                         p.mentions__view Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         .mentions__quote2
-                            img(src="../assets/images/uot2.png", alt="Quotes")
+                            img(src="../assets/images/uot2.png", loading="lazy", alt="Quotes")
                     .mentions__person
-                        img.mentions__user(src=`../assets/images/${src}.png`, alt="User")
+                        img.mentions__user(src=`../assets/images/${src}.png`, loading="lazy", alt="User")
                         .mentions__id
                             h4.mentions__name= name
                             p.mentions__site= site
